@@ -1,4 +1,4 @@
-![solar-panel_ai-img](images\solar-panal-ai_gen_img.png) 
+![solar-panel_ai-img](images/solar-panal-ai_gen_img.png) 
 
 # Title
 
