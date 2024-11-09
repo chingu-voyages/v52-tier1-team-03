@@ -1,49 +1,41 @@
-# voyage-tasks
 
-Your project's `readme` is as important to success as your code. For 
-this reason you should put as much care into its creation and maintenance
-as you would any other component of the application.
 
-If you are unsure of what should go into the `readme` let this article,
-written by an experienced Chingu, be your starting point - 
-[Keys to a well written README](https://tinyurl.com/yk3wubft).
+# Title
 
-And before we go there's "one more thing"! Once you decide what to include
-in your `readme` feel free to replace the text we've provided here.
+## Overview
+[ A quick run through of what this project does ], 
+[ key goals, why it might be helpful ] 
 
-> Own it & Make it your Own!
+## Features
+This project includes: 
+ - [] Feature 1
+ - [] Feature 2
+ - [] Feature 3
+ - [] Feature 4
+ - [] Feature 5
 
-## Team Documents
+## Running the project 
+ `cd into the project directory`
+ ```run npm install``` 
 
-You may find these helpful as you work together to organize your project.
+* ALWAYS add a live link if there is one so those checking out your work can see it up and running easily. *
 
-- [Team Project Ideas](./docs/team_project_ideas.md)
-- [Team Decision Log](./docs/team_decision_log.md)
+## Dev Dependencies (examples)
+  - Husky
+  - Prettier
+  - ESLint
+  - Lint-Staged
+  - Babel
+  - Webpack
+  - React
+  - Reat-DOM
 
-Meeting Agenda templates (located in the `/docs` directory in this repo):
-
-- Meeting - Voyage Kickoff --> ./docs/meeting-voyage_kickoff.docx
-- Meeting - App Vision & Feature Planning --> ./docs/meeting-vision_and_feature_planning.docx
-- Meeting - Sprint Retrospective, Review, and Planning --> ./docs/meeting-sprint_retrospective_review_and_planning.docx
-- Meeting - Sprint Open Topic Session --> ./docs/meeting-sprint_open_topic_session.docx
-
-## Our Team
-
-Everyone on your team should add their name along with a link to their GitHub
-& optionally their LinkedIn profiles below. Do this in Sprint #1 to validate
-your repo access and to practice PR'ing with your team *before* you start
-coding!
-
+## Our Team (Contributors) 
 - Jaden Christie  #1: [GitHub](https://github.com/jsvolta) / [LinkedIn](https://www.linkedin.com/in/jadenchristie)
 - Brianna Duncan #2: [GitHub](https://github.com/BriannaD23) / [LinkedIn](https://www.linkedin.com/in/briannaduncan)
-
 - Mark Coty #3: [GitHub](  https://github.com/markcoty) / [LinkedIn](https://www.linkedin.com/in/mark-c-875b00286/.)
-
 - Jessica Hackett #4: [GitHub](https://github.com/mooglemoxie0018 )
 / [LinkedIn]( https://www.linkedin.com/in/jessica-hackett-6725a4325/?trk=opento_sprofile_topcard.)
-
-
-
 -   Zephyrus Koryami  #5 : [GitHub](https://github.com/sokuenryan)
 / [LinkedIn]( https://www.linkedin.com/in/sokuenryan/.)
 
