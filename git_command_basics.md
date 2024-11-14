@@ -30,12 +30,12 @@ This should clone the repo and it should appear in your designated folder if you
 2. Go back to your terminal and type in 
 ``` git status ``` and you should see the newest changes show up in `red`.
 
-![trmnal-mod-red-img](images\vscode-screenshot-mod-red.png)
+![trmnal-mod-red-img](./images/vscode-screenshot-mod-red.png)
 
 3. Then type in ``` git add .``` to add `newest` changes
 4. If you type in `git status` again you’ll notice all the changes stated were once `red` are now `green`.
 
-![trmnal-mod-green-img](images\vs-code-mod-green.png)
+![trmnal-mod-green-img](./images/vs-code-mod-green.png)
 
 5. Now type ``` git commit -m "your message describing your latest change" ```
 6. (optional and good practice) Double check and make sure everything is running smoothly by running `git status` again 
@@ -44,7 +44,7 @@ You’ll see some code pop up, and again (completely optional) but I usually run
 
 ### Locate Your Branch on Github
 In order to see your branch appear on your Github repo
-1. Click on the `Main` ![main-btn-img](images\github-main-button.png) button to open the dropdown and then select `View All Branches`
+1. Click on the `Main` ![main-btn-img](./images/github-main-button.png) button to open the dropdown and then select `View All Branches`
 2. You probably *won’t see it* listed on there right away so hit `refresh` and it should pop up under `"your-name branch"`.
 
 Great job!You’ve successfully created an independent branch on your Github repo to commit your work.
