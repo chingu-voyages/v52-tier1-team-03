@@ -11,7 +11,7 @@
 1. In your Github repo - click on the `<> Code` dropdown button & copy the repo url
  or just use ``` https://github.com/chingu-voyages/v52-tier1-team-03.git ```
 
-![code-button-img](images\copy-github-url.png)
+![code-button-img](images/copy-github-url.png)
 
 2. In your VS code terminal type 
 ``` git clone https://github.com/chingu-voyages/v52-tier1-team-03.git ``` 
