@@ -45,7 +45,7 @@ You’ll see some code pop up, and again (completely optional) but I usually run
 ### Locate Your Branch on Github
 In order to see your branch appear on your Github repo
 1. Click on the `Main` button to open the dropdown and then select `View All Branches`
-![main-btn-img](./images/github-main-button.png)
+![main-btn-img](images/github-main-button.png)
   
 2. You probably *won’t see it* listed on there right away so hit `refresh` and it should pop up under `"your-name branch"`.
 
