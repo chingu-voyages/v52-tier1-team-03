@@ -1,7 +1,5 @@
 # Instructions to set up Git
- 
-  
-## Setting up
+
 ### 1. Create a place to put your `cloned repository files`
 **Common commands: (PC Users) **
 - `mkdir your-directory-name` makes a directory 
