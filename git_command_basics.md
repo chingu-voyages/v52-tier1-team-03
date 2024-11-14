@@ -30,7 +30,7 @@ This should clone the repo and it should appear in your designated folder if you
 2. Go back to your terminal and type in 
 ``` git status ``` and you should see the newest changes show up in `red`.
 
-![trmnal-mod-red-img](./images/vscode-screenshot-mod-red.png)
+![trmnal-mod-red-img](images/vscode-screenshot-mod-red.png)
 
 3. Then type in ``` git add .``` to add `newest` changes
 4. If you type in `git status` again you’ll notice all the changes stated were once `red` are now `green`.
