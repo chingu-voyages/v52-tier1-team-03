@@ -5,10 +5,11 @@ import PrivateRoute from './auth/privateRoute';
 import { AuthProvider } from './auth/authContext';
 
 //pages
-import Login from './components/admin_login';
-import Nav from './components/admin_nav';
-import Error from './components/admin_error';
-import Admin from './components/admin_page';
+import Admin from './components/admin/admin_page';
+import Login from './components/admin/admin_login';
+import Nav from './components/admin/admin_nav';
+import Error from './components/admin/admin_error';
+import ResidentForm from './components/resident/resident_form';
 
 const router = createBrowserRouter([
  {
@@ -27,6 +28,16 @@ const router = createBrowserRouter([
     <>
        <Nav />
        <PrivateRoute element={Admin} />
+    </>
+  ),
+   errorElement: <Error />
+ },
+ {
+  path:'/resident-form',
+  element: (
+    <>
+       <Nav />
+       <ResidentForm />
     </>
   ),
    errorElement: <Error />
