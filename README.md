@@ -1,6 +1,6 @@
 ![solar-panel_ai-img](images/solar-panal-ai_gen_img.png) 
 
-# Title
+# Solar Plexus
 
 ## Overview
 [ A quick run through of what this project does ], 
