@@ -1,48 +1,48 @@
 //react imports
-import React from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import PrivateRoute from './auth/privateRoute';
-import { AuthProvider } from './auth/authContext';
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import PrivateRoute from "./auth/privateRoute";
+import { AuthProvider } from "./auth/authContext";
 
 //pages
-import Admin from './components/admin/admin_page';
-import Login from './components/admin/admin_login';
-import Nav from './components/admin/admin_nav';
-import Error from './components/admin/admin_error';
-import ResidentForm from './components/resident/resident_form';
+import Admin from "./components/admin/admin_page";
+import Login from "./components/admin/admin_login";
+import Nav from "./components/admin/admin_nav";
+import Error from "./components/admin/admin_error";
+import ResidentForm from "./components/resident/resident_form";
 
 const router = createBrowserRouter([
     {
-        path: '/',
+        path: "/",
         element: (
             <>
                 <Nav />
                 <Login />
             </>
         ),
-        errorElement: <Error />
+        errorElement: <Error />,
     },
     {
-        path: '/adminpage',
+        path: "/adminpage",
         element: (
             <>
                 <Nav />
                 <PrivateRoute element={Admin} />
             </>
         ),
-        errorElement: <Error />
+        errorElement: <Error />,
     },
     {
-        path: '/resident-form',
+        path: "/resident-form",
         element: (
             <>
                 <Nav />
                 <ResidentForm />
             </>
         ),
-        errorElement: <Error />
+        errorElement: <Error />,
     },
-])
+]);
 function App() {
     return (
         <AuthProvider>
@@ -51,6 +51,6 @@ function App() {
             </div>
         </AuthProvider>
     );
-};
+}
 
 export default App;

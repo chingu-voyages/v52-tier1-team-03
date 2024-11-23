@@ -4,9 +4,9 @@
     height: 100%;
     justify-content: center;
     align-items: center;
-  }
-  
-  .register-content {
+}
+
+.register-content {
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -14,66 +14,67 @@
     width: 370px;
     height: 400px;
     margin-top: 20px;
-    font-family:Arial, sans-serif;
-  }
-  
-  .register-title {
+    font-family: Arial, sans-serif;
+}
+
+.register-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 15px;
-  }
-  
-  .register-title h2 {
+}
+
+.register-title h2 {
     display: flex;
     flex-direction: column;
     font-size: 37px;
     margin-bottom: 8px;
-  }
-  
-  .register-title span {
+}
+
+.register-title span {
     color: hsl(var(--accent));
     margin-left: 30px;
-  }
-  
-  .register-title p {
+}
+
+.register-title p {
     display: flex;
     justify-content: center;
     font-size: 14px;
-  }
-  
-  .register form {
+}
+
+.register form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-  }
-  
-  .register input {
+}
+
+.register input {
     height: 45px;
     width: 300px;
     margin-bottom: 20px;
     font-size: 15px;
-  }
-  
-  .register-form p {
+}
+
+.register-form p {
     margin: 2px;
     font-size: 20px;
-  }
-  
-  .register-btns {
+}
+
+.register-btns {
     display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
-  }
-  
-  .register-btns button {
+}
+
+.register-btns button {
     display: flex;
     justify-content: space-around;
     height: 40px;
     width: 130px;
     font-size: 12px;
-  }
+}
+
