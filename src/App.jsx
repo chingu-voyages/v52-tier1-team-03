@@ -6,7 +6,6 @@ import { AuthProvider } from "./auth/authContext";
 
 //pages
 import Admin from "./components/admin/admin_page";
-import Login from "./components/admin/admin_login";
 import Nav from "./components/admin/admin_nav";
 import Error from "./components/admin/admin_error";
 import ResidentForm from "./components/resident/resident_form";
@@ -17,13 +16,13 @@ const router = createBrowserRouter([
         element: (
             <>
                 <Nav />
-                <Login />
+                <ResidentForm />
             </>
         ),
         errorElement: <Error />,
     },
     {
-        path: "/adminpage",
+        path: "/admin",
         element: (
             <>
                 <Nav />
@@ -32,17 +31,8 @@ const router = createBrowserRouter([
         ),
         errorElement: <Error />,
     },
-    {
-        path: "/resident-form",
-        element: (
-            <>
-                <Nav />
-                <ResidentForm />
-            </>
-        ),
-        errorElement: <Error />,
-    },
 ]);
+
 function App() {
     return (
         <AuthProvider>
