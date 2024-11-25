@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { signInWithEmailAndPassword, } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../auth/firebase/firebase.config";
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { UserIcon } from "@heroicons/react/24/solid";
 
 const Login = () => {
@@ -30,7 +30,9 @@ const Login = () => {
         <div className="login">
             <div className="login-content">
                 <div className="login-title">
-                    <h2>Admin<span className="accent">Login</span></h2>
+                    <h2>
+                        Admin<span className="accent">Login</span>
+                    </h2>
                 </div>
 
                 <form onSubmit={handleSubmit} className="login-form">
@@ -41,22 +43,25 @@ const Login = () => {
                         required
                         placeholder="Email"
                         aria-label="Your Email"
-                        autoComplete="email" />
+                        autoComplete="email"
+                    />
 
                     <div className="password-input-wrapper">
                         <input
-                            type={showPassword ? 'text' : 'password'}
+                            type={showPassword ? "text" : "password"}
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required
                             placeholder="Password"
                             aria-label="Your Password"
                             autoComplete="current-password"
-                            className="password-input" />
+                            className="password-input"
+                        />
                         <button
                             type="button"
                             onClick={togglePasswordVisibility}
-                            className="eye-icon">
+                            className="eye-icon"
+                        >
                             {showPassword ? <FaEyeSlash /> : <FaEye />}
                         </button>
                     </div>
@@ -67,7 +72,7 @@ const Login = () => {
                             <UserIcon width={20} />
                         </button>
                     </div>
-                    {error && <p className="error-message">{error}</p>}   
+                    {error && <p className="error-message">{error}</p>}
                 </form>
             </div>
         </div>
