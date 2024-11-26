@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+    --default-font: Inter, sans-serif;
+    --font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--default-font);
+    font-size: var(--font-size);
+}
+k
+/* TODO: remove non resident_form classes to seperate css file */
+
+body {
+    width: 100%;
+    margin: auto;
+}
+
+.App {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* FORM */
+
+.title {
+    margin: 0;
+    width: 100%;
+    max-width: 500px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    border-bottom: solid 1px black;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1rem;
+}
+
+.residentInfo,
+.dateInfo {
+    width: 100%;
+    max-width: 500px;
+}
+
+.formItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* TEMP */
+    margin-bottom: 20px;
+}
+
+label {
+    width: 100%;
+    font-size: 18px;
+}
+
+input {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: #d9d9d9;
+    font-size: var(--font-size);
+
+    /* TEMP */
+    height: 3rem;
+}
+
+.react-calendar {
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.react-calendar__navigation {
+    background-color: #c2c0c0;
+    margin: 0;
+}
+
+.react-calendar__viewContainer {
+    background-color: #d9d9d9;
+}
+
+.timeDisclaimer {
+    font-size: 10px;
+}
+
+button[type="submit"] {
+    border: none;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+
+    /* TEMP */
+    height: 3rem;
+}
+
+@media (max-width: 1000px) {
+    form {
+        flex-direction: column;
+    }
+}

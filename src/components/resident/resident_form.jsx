@@ -1,226 +1,130 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+import "../../styles/resident_form.css";
 
 function ResidentForm() {
-    const [newUserName, setNewUserName] = useState("");
-    const [newUserPhoneAreaCode, setNewUserPhoneAreaCode] = useState("");
-    const [newUserPhonePrefix, setNewUserPhonePrefix] = useState("");
-    const [newUserPhoneoLocalx, setNewUserPhoneLocalx] = useState("");
-    const [newUserEmail, setNewUserEmail] = useState("");
-    const [newUserAddress1, setNewUserAddress1] = useState("");
-    const [newUserAddress2, setNewUserAddress2] = useState("");
-    const [newUserCity, setNewUserCity] = useState("");
-    const [newUserStateLocal, setNewUserStateLocal] = useState("");
-    const [newUserZipCode, setNewUserZipCode] = useState("");
-
-    const [userProfile, setuserProfile] = useState(() => {
-        const savedUser = localStorage.getItem("userProfile");
-        return savedUser ? JSON.parse(savedUser) : [];
+    const [request, setRequest] = useState({
+        name: "",
+        email: "",
+        phoneNumber: "",
+        address: "",
+        date: new Date(),
     });
 
-    useEffect(() => {
-        localStorage.setItem("userProfile", JSON.stringify(userProfile));
-    }, [userProfile]);
-
-    const handleSubmit = () => {
-        if (
-            newUserName &&
-            newUserPhoneAreaCode &&
-            newUserPhonePrefix &&
-            newUserPhoneoLocalx &&
-            newUserEmail &&
-            newUserAddress1 &&
-            newUserAddress2 &&
-            newUserCity &&
-            newUserStateLocal &&
-            newUserZipCode
-        ) {
-            const newUser = {
-                contact: {
-                    name: newUserName,
-                    email: newUserEmail,
-                    phone: [
-                        newUserPhoneAreaCode,
-                        newUserPhonePrefix,
-                        newUserPhoneoLocalx,
-                    ],
-                },
-
-                address: {
-                    address_line_1: newUserAddress1,
-                    address_line_2: newUserAddress2,
-                    city: newUserCity,
-                    state: newUserStateLocal,
-                    zipcode: newUserZipCode,
-                },
-            };
-            setuserProfile([...userProfile, newUser]);
-            setNewUserName("");
-            setNewUserPhoneAreaCode("");
-            setNewUserPhonePrefix("");
-            setNewUserPhoneLocalx("");
-            setNewUserEmail("");
-            setNewUserAddress1("");
-            setNewUserAddress2("");
-            setNewUserCity("");
-            setNewUserStateLocal("");
-            setNewUserZipCode("");
-        }
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setRequest((prevState) => ({
+            ...prevState,
+            [name]: value,
+        }));
     };
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // TODO: Verify Address
+
+        let requests = [];
+
+        // FIXME: works but there should be a more concise way
+        // also this shouldn't parse all requests before saving
+        if (localStorage.requests) {
+            requests = [...JSON.parse(localStorage.requests), request];
+        } else {
+            requests = [request];
+        }
+
+        localStorage.requests = JSON.stringify(requests);
+    };
+
+    // NOTE: maybe add a regex check for email and phone?
+    // TODO: remove title from here and move to resident page
     return (
-        <div className="resident-form">
-            <p>Submit your residential information here</p>
-            <h3>Contact Information</h3>
-            <form>
-                <div className="resident_contact">
-                    <div className="input-labels">
-                        <label>Name</label>
-                        <label>Phone</label>
-                        <label>Email</label>
+        <>
+            <form onSubmit={handleSubmit}>
+                <div className="residentInfo">
+                    <p className="title">Schedule a Visit</p>
+                    <div className="formItem">
+                        <label htmlFor="nameInput">Full Name</label>
+                        <input
+                            type="text"
+                            id="nameInput"
+                            name="name"
+                            value={request.name}
+                            onChange={handleChange}
+                            required
+                        />
                     </div>
-
-                    <div className="input-areas">
-                        <div className="resident_name">
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                placeholder="Enter full name"
-                                value={newUserName}
-                                onChange={(e) => setNewUserName(e.target.value)}
-                                required
-                            />
-                        </div>
-
-                        <div className="resident_phone-number">
-                            <input
-                                className="area-code"
-                                type="tel"
-                                id="area-code"
-                                name="phone"
-                                inputMode="tel"
-                                placeholder="555"
-                                maxLength={3}
-                                minLength={3}
-                                max={999}
-                                value={newUserPhoneAreaCode}
-                                onChange={(e) =>
-                                    setNewUserPhoneAreaCode(e.target.value)
-                                }
-                                required
-                            />
-                            -
-                            <input
-                                className="prefix"
-                                type="tel"
-                                id="prefix"
-                                name="phone"
-                                inputMode="tel"
-                                placeholder="555"
-                                maxLength={3}
-                                minLength={3}
-                                max={999}
-                                value={newUserPhonePrefix}
-                                onChange={(e) =>
-                                    setNewUserPhonePrefix(e.target.value)
-                                }
-                                required
-                            />
-                            -
-                            <input
-                                className="local-exchange"
-                                type="tel"
-                                id="local-exchange"
-                                name="phone"
-                                inputMode="tel"
-                                placeholder="5555"
-                                maxLength={4}
-                                minLength={4}
-                                value={newUserPhoneoLocalx}
-                                onChange={(e) =>
-                                    setNewUserPhoneLocalx(e.target.value)
-                                }
-                                required
-                            />
-                        </div>
-                        <div className="resident_email">
-                            <input
-                                type="email"
-                                name="email"
-                                inputMode="email"
-                                placeholder="email@email.com"
-                                value={newUserEmail}
-                                onChange={(e) =>
-                                    setNewUserEmail(e.target.value)
-                                }
-                                required
-                            />
-                        </div>
+                    <div className="formItem">
+                        <label htmlFor="emailInput">Email</label>
+                        <input
+                            type="text"
+                            id="emailInput"
+                            name="email"
+                            value={request.email}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="formItem">
+                        <label htmlFor="phoneInput">Phone Number</label>
+                        <input
+                            type="text"
+                            id="phoneInput"
+                            name="phoneNumber"
+                            value={request.phoneNumber}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="formItem">
+                        <label htmlFor="addressInput">Address</label>
+                        <input
+                            type="text"
+                            id="addressInput"
+                            name="address"
+                            value={request.address}
+                            onChange={handleChange}
+                            required
+                        />
                     </div>
                 </div>
-
-                <h3>Address information</h3>
-                <div className="resident_address">
-                    <div className="input-labels">
-                        <label>Address Line 1</label>
-                        <label>Address Line 2</label>
-                        <label>City</label>
-                        <label>State</label>
-                        <label>ZIP Code </label>
-                    </div>
-
-                    <div className="input-areas">
-                        <input
-                            type="text"
-                            name="addressln1"
-                            placeholder="Name of street"
-                            value={newUserAddress1}
-                            onChange={(e) => setNewUserAddress1(e.target.value)}
-                            required
-                        />
-                        <input
-                            type="addressln2"
-                            name="level"
-                            placeholder="Apt, suite, floor, etc"
-                            value={newUserAddress2}
-                            onChange={(e) => setNewUserAddress2(e.target.value)}
-                            required
-                        />
-                        <input
-                            type="text"
-                            name="city"
-                            placeholder="Name of city"
-                            value={newUserCity}
-                            onChange={(e) => setNewUserCity(e.target.value)}
-                            required
-                        />
-                        <input
-                            type=""
-                            name="state"
-                            placeholder="Name of state"
-                            value={newUserStateLocal}
-                            onChange={(e) =>
-                                setNewUserStateLocal(e.target.value)
+                <div className="dateInfo">
+                    <div className="formItem">
+                        <label htmlFor="dateInput">Select Date</label>
+                        <Calendar
+                            showTimeSelect
+                            id="dateInput"
+                            value={request.date}
+                            onChange={(value, event) =>
+                                setRequest({ ...request, date: value })
                             }
                             required
                         />
+                    </div>
+                    <div className="formItem">
+                        <label htmlFor="timeslot">Select Timeslot</label>
                         <input
                             type="text"
-                            name="zipcode"
-                            placeholder="Enter your zipcode"
-                            value={newUserZipCode}
-                            onChange={(e) => setNewUserZipCode(e.target.value)}
+                            placeholder="THIS IS TEMPORARY FIX THIS"
+                            id="timeslot"
+                            name="timeslot"
+                            value={request.timeslot}
+                            onChange={handleChange}
                             required
                         />
                     </div>
+                    <p className="timeDisclaimer">
+                        Preferred timeslots are indicative. Residents will
+                        receive a confirmation a few hours before the scheduled
+                        visit.
+                    </p>
+                    <button type="submit">Request Appointment</button>
                 </div>
             </form>
-            <button className="resident_form-btn" onClick={handleSubmit}>
-                Submit
-            </button>
-        </div>
+        </>
     );
 }
 
 export default ResidentForm;
-
