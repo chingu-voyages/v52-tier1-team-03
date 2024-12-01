@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* VARIABLES */
+:root {
+    --default-font: Inter, sans-serif;
+    --font-size: 18px;
+}
+
+/* NOTE: this makes width include the border of elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.residentConfirmation {
+    max-width: 600px;
+    margin: 0 10%;
+
+    /* text */
+    font-family: var(--default-font);
+    font-weight: 400;
+    line-height: 35px;
+    font-size: var(--font-size);
+}
+
+h1 {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    padding-left: 3rem;
+
+    /* text*/
+    font-size: 24px;
+    font-weight: 400;
+
+    /* border */
+    border-bottom: solid 1px;
+}
