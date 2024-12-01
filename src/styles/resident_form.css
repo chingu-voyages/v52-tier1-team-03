@@ -1,54 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+/* VARIABLES */
 :root {
     --default-font: Inter, sans-serif;
-    --font-size: 16px;
+    --font-size: 18px;
 }
 
+/* NOTE: this makes width include the border of elements */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-html {
-    font-family: var(--default-font);
-    font-size: var(--font-size);
-}
-k
-/* TODO: remove non resident_form classes to seperate css file */
-
-body {
-    width: 100%;
-    margin: auto;
-}
-
-.App {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/* NOTE: styles that will be extracted later */
 
 /* FORM */
 
-.title {
-    margin: 0;
-    width: 100%;
-    max-width: 500px;
-    font-weight: 400;
-    font-size: 1.5rem;
-    border-bottom: solid 1px black;
-    text-align: center;
-}
-
 form {
-    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 1rem;
+
+    /* text */
+    font-family: var(--default-font);
+    font-weight: 400;
+    line-height: 35px;
+    font-size: var(--font-size);
+}
+
+/* NOTE: maybe move media queries to sperate section
+*        for now wanted styles to be localized */
+@media (max-width: 1000px) {
+    form {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.formTitle {
+    /* text*/
+    font-size: 24px;
+
+    /* border */
+    border-bottom: solid 1px;
+    padding-left: 2rem;
 }
 
 .residentInfo,
@@ -60,28 +57,31 @@ form {
 .formItem {
     display: flex;
     flex-direction: column;
-    align-items: center;
 
-    /* TEMP */
     margin-bottom: 20px;
 }
 
 label {
-    width: 100%;
+    /* text */
     font-size: 18px;
 }
 
 input {
-    width: 100%;
-    border-radius: 5px;
-    border: none;
-    background-color: #d9d9d9;
-    font-size: var(--font-size);
+    /* text */
+    font-size: inherit;
 
-    /* TEMP */
-    height: 3rem;
+    /* shape */
+    border-radius: 5px;
+    padding: 16px; /* TODO: 16px is my rem value, double check I can use rem instead */
+
+    /* border */
+    border: none;
+
+    /* colours */
+    background-color: #d9d9d9;
 }
 
+/* TODO: fix react-calendar styling */
 .react-calendar {
     border: none;
     border-radius: 5px;
@@ -99,22 +99,29 @@ input {
 }
 
 .timeDisclaimer {
-    font-size: 10px;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 15px;
 }
 
 button[type="submit"] {
-    border: none;
-    background-color: #d9d9d9;
-    border-radius: 5px;
+    /* text*/
     font-size: 20px;
+    /* NOTE: doesn't inherit properly */
+    line-height: inherit;
+    font-family: inherit;
+
+    /* shape */
+    margin: 0 10%;
+    width: calc(100% - 20%); /* NOTE: CSS is so cool now */
+    border-radius: 5px;
+
+    /* border */
+    border: none;
+
+    /* colours */
+    background-color: #d9d9d9;
+
+    /* cursor */
     cursor: pointer;
-
-    /* TEMP */
-    height: 3rem;
-}
-
-@media (max-width: 1000px) {
-    form {
-        flex-direction: column;
-    }
 }

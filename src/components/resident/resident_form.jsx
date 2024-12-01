@@ -39,12 +39,11 @@ function ResidentForm() {
     };
 
     // NOTE: maybe add a regex check for email and phone?
-    // TODO: remove title from here and move to resident page
     return (
         <>
             <form onSubmit={handleSubmit}>
                 <div className="residentInfo">
-                    <p className="title">Schedule a Visit</p>
+                    <p className="formTitle">Schedule a Visit</p>
                     <div className="formItem">
                         <label htmlFor="nameInput">Full Name</label>
                         <input
@@ -92,7 +91,9 @@ function ResidentForm() {
                 </div>
                 <div className="dateInfo">
                     <div className="formItem">
-                        <label htmlFor="dateInput">Select Date</label>
+                        <label htmlFor="dateInput">
+                            Select Appointment Date/Time
+                        </label>
                         <Calendar
                             showTimeSelect
                             id="dateInput"
