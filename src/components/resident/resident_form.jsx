@@ -39,6 +39,7 @@ function ResidentForm() {
     };
 
     // NOTE: maybe add a regex check for email and phone?
+    // NOTE: maybe select uses an index rather than the time as the value?
     return (
         <>
             <form onSubmit={handleSubmit}>
@@ -106,15 +107,24 @@ function ResidentForm() {
                     </div>
                     <div className="formItem">
                         <label htmlFor="timeslot">Select Timeslot</label>
-                        <input
+                        <select
                             type="text"
-                            placeholder="THIS IS TEMPORARY FIX THIS"
                             id="timeslot"
                             name="timeslot"
                             value={request.timeslot}
                             onChange={handleChange}
                             required
-                        />
+                        >
+                            <option value="8">8am</option>
+                            <option value="9">9am</option>
+                            <option value="10">10am</option>
+                            <option value="11">11am</option>
+                            <option value="12">12pm</option>
+                            <option value="1">1pm</option>
+                            <option value="2">2pm</option>
+                            <option value="3">3pm</option>
+                            <option value="4">4pm</option>
+                        </select>
                     </div>
                     <p className="timeDisclaimer">
                         Preferred timeslots are indicative. Residents will

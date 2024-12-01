@@ -98,6 +98,24 @@ input {
     background-color: #d9d9d9;
 }
 
+select {
+    /* text*/
+    font-size: inherit;
+    /* NOTE: doesn't inherit properly */
+    line-height: inherit;
+    font-family: inherit;
+
+    /* shape */
+    border-radius: 5px;
+    padding: 16px; /* TODO: 16px is my rem value, double check I can use rem instead */
+
+    /* border */
+    border: none;
+
+    /* colours */
+    background-color: #d9d9d9;
+}
+
 .timeDisclaimer {
     font-style: italic;
     font-weight: 300;
