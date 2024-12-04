@@ -8,7 +8,7 @@ import { AuthProvider } from "./auth/authContext";
 import Admin from "./components/admin/admin_page";
 import Nav from "./components/admin/admin_nav";
 import Error from "./components/admin/admin_error";
-import ResidentForm from "./components/resident/resident_form";
+import ResidentForm from "./components/resident/resident_form.jsx";
 
 const router = createBrowserRouter([
     {
