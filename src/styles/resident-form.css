@@ -1,5 +1,45 @@
+.resident-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.resident-image{
+    width: 50%;
+    height: 100vh;
+
+}
+
+.solar-img{
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ image-rendering: auto;
+}
+
+
+
+.resident-form-container{
+    display: flex;
+    margin: 0 auto;
+
+}
+
 .resident-form {
-    width: 300px;
+    width: 600px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.divider{
+    border: 3px solid  #c38d3c ;
+    width: 27%;
+    display: flex;
+    margin: 0 auto;
+
 }
 
 .resident_contact {
@@ -8,6 +48,10 @@
     gap: 20px;
 }
 
+.resident-form p {
+    text-align: center;
+    margin-bottom: 6px;
+}
 .resident_address {
     display: flex;
     flex-direction: row;
@@ -19,6 +63,78 @@
     display: flex;
     gap: 10px;
 }
+
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+h3 {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #333;
+    border-bottom: 2px solid #c38d3c;
+    padding-bottom: 5px;
+}
+
+.resident_contact,
+.resident_address {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-labels {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: right;
+    padding-right: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.input-areas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #c38d3c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(195, 141, 60, 0.5);
+}
+
+.resident_phone-number {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.resident_phone-number input {
+    width: 60px;
+    text-align: center;
+}
+
 
 .resident_phone-number .area-code {
     width: 30px;
@@ -43,4 +159,122 @@
     flex-direction: column;
     gap: 13px;
 }
+
+.horizontal-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.horizontal-form h3 {
+    color: #444;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #c38d3c;
+    padding-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    flex: 1; 
+    font-size: 1rem;
+    color: #666;
+    margin-right: 10px;
+    text-align: right;
+}
+
+input {
+    flex: 2; 
+    padding: 12px 15px;
+    font-size: 1rem;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #c38d3c;
+    box-shadow: 0 0 6px rgba(195, 141, 60, 0.4);
+}
+
+.phone-input {
+    display: flex;
+    gap: 5px;
+}
+
+.phone-input input {
+    width: 50px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+
+.resident_form-btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 12px 15px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #c38d3c;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.resident_form-btn:hover {
+    background-color: #a3752d;
+}
+
+
+@media (max-width: 768px) {
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    label {
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    .phone-input {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    .resident_contact,
+    .resident_address {
+        grid-template-columns: 1fr;
+    }
+
+    .input-labels {
+        text-align: left;
+    }
+
+    .resident_phone-number {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    
+}
+
 
