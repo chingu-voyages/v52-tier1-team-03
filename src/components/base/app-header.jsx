@@ -1,8 +1,9 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { IoExitOutline } from "react-icons/io5";
+import { FaHome } from "react-icons/fa";
 
-const Nav = () => {
+
+const AppHeader = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const isAuthPage =
@@ -14,23 +15,21 @@ const Nav = () => {
     };
 
     return (
-        <nav className="nav">
-            <div className="nav-icon">{/* nav icon goes here */}</div>
+        <div className="app-header">
 
-            <div className="nav-btns">
+            <div className="logout-btn">
                 {!isAuthPage && (
                     <button
-                        className="logout-btn"
                         onClick={handleLogout}
                         aria-label="logout"
                     >
-                        <span>Go Back</span>
-                        <IoExitOutline />
+                        {/* hover feature? */}
+                        <FaHome size={50} /> 
                     </button>
                 )}
             </div>
-        </nav>
+        </div>
     );
 };
 
-export default Nav;
+export default AppHeader;
