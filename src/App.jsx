@@ -1,6 +1,6 @@
 //react imports
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import PrivateRoute from "./auth/privateRoute";
 import { AuthProvider } from "./auth/authContext";
 
@@ -11,7 +11,7 @@ import ResidentForm from "./components/resident/resident_form.jsx";
 import AppHeader from "./components/base/app-header.jsx";
 import AppFooter from "./components/base/app-footer.jsx";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: (
