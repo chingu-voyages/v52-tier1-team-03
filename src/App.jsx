@@ -6,17 +6,19 @@ import { AuthProvider } from "./auth/authContext";
 
 //pages
 import Admin from "./components/admin/admin_page";
-import Nav from "./components/admin/admin_nav";
 import Error from "./components/admin/admin_error";
 import ResidentForm from "./components/resident/resident_form.jsx";
+import AppHeader from "./components/base/app-header.jsx";
+import AppFooter from "./components/base/app-footer.jsx";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: (
             <>
-                <Nav />
+                <AppHeader />
                 <ResidentForm />
+                <AppFooter />
             </>
         ),
         errorElement: <Error />,
@@ -25,8 +27,9 @@ const router = createBrowserRouter([
         path: "/admin",
         element: (
             <>
-                <Nav />
+                <AppHeader />
                 <PrivateRoute element={Admin} />
+                <AppFooter />
             </>
         ),
         errorElement: <Error />,
