@@ -10,6 +10,7 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
         "@heroicons/react": "^2.2.0",
         "firebase": "^11.0.2",
         "papaparse": "^5.4.1",
