@@ -1,16 +1,45 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "../../styles/resident_form.css";
+import Papa from "papaparse";
+import { useNavigate } from "react-router-dom";
 
 function ResidentForm() {
     const [request, setRequest] = useState({
         name: "",
         email: "",
         phoneNumber: "",
-        address: "",
+        street: "",
+        city: "Los Angeles",
+        state: "California",
+        zipcode: "",
         date: new Date(),
+        timeslot: "8",
     });
+
+    const [addressDataset, setAddressDataset] = useState([]);
+    const [showPopupConfirm, setShowPopupConfirm] = useState(false);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        fetch(
+            "https://data.lacity.org/api/views/4ca8-mxuh/rows.csv?accessType=DOWNLOAD"
+        )
+            .then((response) => response.text())
+            .then((csvData) => {
+                Papa.parse(csvData, {
+                    header: true, 
+                    skipEmptyLines: true,
+                    complete: (results) => {
+                        setAddressDataset(results.data); 
+                    },
+                });
+            })
+            .catch((error) =>
+                console.error("Error fetching address dataset:", error)
+            );
+    }, []);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -20,26 +49,69 @@ function ResidentForm() {
         }));
     };
 
+    const cleanInput = (input) =>
+        input
+            .replace(/[^a-zA-Z0-9 ]/g, "")
+            .trim()
+            .toLowerCase();
+
+
+    const validateAddress = () => {
+        const [houseNumber, ...streetParts] = request.street.split(" ");
+        const streetName = streetParts.slice(0, -1).join(" "); 
+        const streetSuffix = streetParts.slice(-1)[0];
+
+
+        console.log(
+            "User Input:",
+            houseNumber,
+            streetName,
+            streetSuffix,
+            request.zipcode
+        );
+
+        const isAddressValid = addressDataset.some((entry) => {
+            console.log(
+                "Dataset Entry:",
+                entry.HSE_NBR,
+                entry.STR_NM,
+                entry.STR_SFX_CD,
+                entry.ZIP_CD
+            );
+
+            return (
+                cleanInput(entry.HSE_NBR) === cleanInput(houseNumber) &&
+                cleanInput(entry.STR_NM) === cleanInput(streetName) &&
+                cleanInput(entry.STR_SFX_CD) === cleanInput(streetSuffix) &&
+                cleanInput(entry.ZIP_CD) === cleanInput(request.zipcode)
+            );
+        });
+
+        console.log("Address Valid:", isAddressValid);
+        return isAddressValid;
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // TODO: Verify Address
-
-        let requests = [];
-
-        // FIXME: works but there should be a more concise way
-        // also this shouldn't parse all requests before saving
-        if (localStorage.requests) {
-            requests = [...JSON.parse(localStorage.requests), request];
-        } else {
-            requests = [request];
+        if (!validateAddress()) {
+            alert(
+                "Invalid address. Please provide a valid Los Angeles address."
+            );
+            return;
         }
 
-        localStorage.requests = JSON.stringify(requests);
+        const requests = JSON.parse(localStorage.getItem("requests")) || [];
+        requests.push(request);
+        localStorage.setItem("requests", JSON.stringify(requests));
+
+        setShowPopupConfirm(true);
+
+        setTimeout(() => {
+            navigate("/confirmation");
+        }, 3000);
     };
 
-    // NOTE: maybe add a regex check for email and phone?
-    // NOTE: maybe select uses an index rather than the time as the value?
     return (
         <>
             <form onSubmit={handleSubmit}>
@@ -59,7 +131,7 @@ function ResidentForm() {
                     <div className="formItem">
                         <label htmlFor="emailInput">Email</label>
                         <input
-                            type="text"
+                            type="email"
                             id="emailInput"
                             name="email"
                             value={request.email}
@@ -70,7 +142,7 @@ function ResidentForm() {
                     <div className="formItem">
                         <label htmlFor="phoneInput">Phone Number</label>
                         <input
-                            type="text"
+                            type="tel"
                             id="phoneInput"
                             name="phoneNumber"
                             value={request.phoneNumber}
@@ -79,28 +151,67 @@ function ResidentForm() {
                         />
                     </div>
                     <div className="formItem">
-                        <label htmlFor="addressInput">Address</label>
+                        <label htmlFor="streetInput">Street Address</label>
                         <input
                             type="text"
-                            id="addressInput"
-                            name="address"
-                            value={request.address}
+                            id="streetInput"
+                            name="street"
+                            placeholder="Enter Street Address (e.g., 123 Main St)"
+                            value={request.street}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="formItem">
+                        <label htmlFor="cityInput">City</label>
+                        <select
+                            id="cityInput"
+                            name="city"
+                            value={request.city}
+                            onChange={handleChange}
+                            required
+                        >
+                            <option value="Los Angeles">Los Angeles</option>
+                        </select>
+                    </div>
+                    <div className="formItem">
+                        <label htmlFor="stateInput">State</label>
+                        <select
+                            id="stateInput"
+                            name="state"
+                            value={request.state}
+                            onChange={handleChange}
+                            required
+                        >
+                            <option value="California">California</option>
+                        </select>
+                    </div>
+                    <div className="formItem">
+                        <label htmlFor="zipCodeInput">ZIP Code</label>
+                        <input
+                            type="text"
+                            id="zipCodeInput"
+                            name="zipcode"
+                            value={request.zipcode}
                             onChange={handleChange}
                             required
                         />
                     </div>
                 </div>
+
                 <div className="dateInfo">
                     <div className="formItem">
                         <label htmlFor="dateInput">
                             Select Appointment Date/Time
                         </label>
                         <Calendar
-                            showTimeSelect
                             id="dateInput"
                             value={request.date}
-                            onChange={(value, event) =>
-                                setRequest({ ...request, date: value })
+                            onChange={(value) =>
+                                setRequest((prevState) => ({
+                                    ...prevState,
+                                    date: value,
+                                }))
                             }
                             required
                         />
@@ -108,7 +219,6 @@ function ResidentForm() {
                     <div className="formItem">
                         <label htmlFor="timeslot">Select Timeslot</label>
                         <select
-                            type="text"
                             id="timeslot"
                             name="timeslot"
                             value={request.timeslot}
@@ -133,6 +243,12 @@ function ResidentForm() {
                     </p>
                     <button type="submit">Request Appointment</button>
                 </div>
+
+                {showPopupConfirm && (
+                    <div className="popup-confirm">
+                        <p>Request submitted successfully!</p>
+                    </div>
+                )}
             </form>
         </>
     );

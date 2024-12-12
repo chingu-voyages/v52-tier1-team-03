@@ -15,6 +15,7 @@
 
 .residentConfirmation {
     max-width: 600px;
+    height: 76vh;
     margin: 0 10%;
 
     /* text */
@@ -36,3 +37,4 @@ h1 {
     /* border */
     border-bottom: solid 1px;
 }
+

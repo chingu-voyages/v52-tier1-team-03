@@ -4,12 +4,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PrivateRoute from "./auth/privateRoute";
 import { AuthProvider } from "./auth/authContext";
 
+
 //pages
 import Admin from "./components/admin/admin_page";
 import Error from "./components/admin/admin_error";
 import ResidentForm from "./components/resident/resident_form.jsx";
 import AppHeader from "./components/base/app-header.jsx";
 import AppFooter from "./components/base/app-footer.jsx";
+import Confirmation from "./components/resident/resident_confirmation.jsx"
 
 const router = createBrowserRouter([
     {
@@ -18,6 +20,17 @@ const router = createBrowserRouter([
             <>
                 <AppHeader />
                 <ResidentForm />
+                <AppFooter />
+            </>
+        ),
+        errorElement: <Error />,
+    },
+    {
+        path: "/confirmation",
+        element: (
+            <>
+                <AppHeader />
+                <Confirmation />
                 <AppFooter />
             </>
         ),
