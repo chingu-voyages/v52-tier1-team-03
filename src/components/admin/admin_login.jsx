@@ -5,7 +5,7 @@ import { auth } from "../../auth/firebase/firebase.config";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { UserIcon } from "@heroicons/react/24/solid";
 
-const Login = () => {
+const AdminLogin = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
@@ -79,4 +79,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default AdminLogin;
