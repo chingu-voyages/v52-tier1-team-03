@@ -1,15 +1,14 @@
 import "../../styles/residentlanding.css";
-import sunLogo from "/images/sun_logo.png"
-import solarPhoto from "/images/desktop_stockphoto.jpg"
-import { Link } from 'react-router-dom';
-
+import sunLogo from "/images/sun_logo.png";
+import solarPhoto from "/images/desktop_stockphoto.jpg";
+import { Link } from "react-router-dom";
 
 function ResidentLanding() {
     return (
         <div className="resident-landing-page">
             <header className="rl-header">
                 <div className="header-elements">
-                    <img src={sunLogo}  className="sunlogo"  alt="" />
+                    <img src={sunLogo} className="sunlogo" alt="" />
                     <h1 className="rl-h1">SOLAR PLEXIS</h1>
                 </div>
             </header>
@@ -24,21 +23,18 @@ function ResidentLanding() {
                     </div>
 
                     <div className="button-container">
-                    <Link to="/residentform">
-                        <button className="schl-btn">Schedule a Visit</button>
-                        <div className="blue-border hidden"></div>
-                    </Link>
+                        <Link to="/residentform">
+                            <button className="schl-btn">
+                                Schedule a Visit
+                            </button>
+                            <div className="blue-border hidden"></div>
+                        </Link>
                     </div>
-
                 </div>
             </div>
 
-        
-
-            <footer className="rl-footer">
-            </footer>
+            <footer className="rl-footer"></footer>
         </div>
-    
     );
 }
 

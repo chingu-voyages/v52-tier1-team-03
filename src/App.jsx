@@ -19,6 +19,7 @@ import AdminLogin from "./components/admin/admin_login.jsx";
 import AdminPage from "./components/admin/admin_page";
 import NewRequests from "./components/admin/admin_new-requests.jsx";
 import ConfirmedRequests from "./components/admin/admin_confirmed-requests.jsx";
+import CompletedRequests from "./components/admin/admin_completed-requests.jsx"
 
 //resident
 import ResidentForm from "./components/resident/resident_form.jsx";
@@ -92,6 +93,17 @@ const router = createBrowserRouter([
             <>
                 <AppHeader />
                 <PrivateRoute element={ConfirmedRequests} />
+                <AppFooter />
+            </>
+        ),
+        errorElement: <Error />,
+    },
+    {
+        path: "/admin/completedrequests",
+        element: (
+            <>
+                <AppHeader />
+                <PrivateRoute element={CompletedRequests} />
                 <AppFooter />
             </>
         ),
