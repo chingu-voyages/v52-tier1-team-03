@@ -4,10 +4,15 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PrivateRoute from "./auth/privateRoute";
 import { AuthProvider } from "./auth/authContext";
 
+
 //pages
+
+import Error from "./components/admin/admin_error";
+import ResidentLanding from "./components/resident/resident_landing_page.jsx"
 import AppHeader from "./components/base/app-header.jsx";
 import AppFooter from "./components/base/app-footer.jsx";
-import Error from "./components/admin/admin_error";
+import Confirmation from "./components/resident/resident_confirmation.jsx"
+
 
 //admin
 import AdminLogin from "./components/admin/admin_login.jsx";
@@ -23,8 +28,28 @@ const router = createBrowserRouter([
         path: "/",
         element: (
             <>
+                <ResidentLanding />
+            </>
+        ),
+        errorElement: <Error />,
+    },
+    {
+        path: "/residentform",
+        element: (
+            <>
                 <AppHeader />
                 <ResidentForm />
+                <AppFooter />
+            </>
+        ),
+        errorElement: <Error />,
+    },
+    {
+        path: "/confirmation",
+        element: (
+            <>
+                <AppHeader />
+                <Confirmation />
                 <AppFooter />
             </>
         ),
