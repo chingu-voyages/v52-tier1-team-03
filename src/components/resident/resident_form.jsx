@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState } from "react";
 import Calendar from "react-calendar";
 
 import "react-calendar/dist/Calendar.css";
@@ -71,9 +71,8 @@ function ResidentForm() {
         91749, 91756, 91769, 91771, 91772, 91778, 91788, 91793, 91802, 91804,
         91899, 91896, 91222, 91226, 91225, 91305, 91308, 91310, 91309, 91313,
         91322, 91327, 91329, 91328, 91334, 91333, 91337, 91341, 91346, 91353,
-        91357, 91365, 91372, 91371, 91376, 91380, 91382, 91385, 91386, 91393
-      ];
-      
+        91357, 91365, 91372, 91371, 91376, 91380, 91382, 91385, 91386, 91393,
+    ];
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -85,26 +84,27 @@ function ResidentForm() {
 
     const validateAddress = () => {
         const zipCodeInput = Number(request.zipcode.trim());
-    
+
         const isZipCodeValid = zipCodes.includes(zipCodeInput);
         console.log("ZIP Code Valid:", isZipCodeValid);
         return isZipCodeValid;
     };
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
         if (!validateAddress()) {
-            alert("Invalid address. Please provide a valid Los Angeles address.");
+            alert(
+                "Invalid address. Please provide a valid Los Angeles address."
+            );
             return;
         }
         const updatedRequest = { ...request, status: "new" };
 
         const requests = JSON.parse(localStorage.getItem("requests")) || [];
-        
+
         requests.push(updatedRequest);
 
-        
         localStorage.setItem("requests", JSON.stringify(requests));
 
         setShowPopupConfirm(true);
@@ -230,17 +230,18 @@ function ResidentForm() {
                             onChange={handleChange}
                             required
                         >
-                            <option value="8">8am</option>
-                            <option value="9">9am</option>
-                            <option value="10">10am</option>
-                            <option value="11">11am</option>
-                            <option value="12">12pm</option>
-                            <option value="1">1pm</option>
-                            <option value="2">2pm</option>
-                            <option value="3">3pm</option>
-                            <option value="4">4pm</option>
+                            <option value="8:00am">8:00am</option>
+                            <option value="9:00am">9:00am</option>
+                            <option value="10:00am">10:00am</option>
+                            <option value="11:00am">11:00am</option>
+                            <option value="12:00pm">12:00pm</option>
+                            <option value="1:00pm">1:00pm</option>
+                            <option value="2:00pm">2:00pm</option>
+                            <option value="3:00pm">3:00pm</option>
+                            <option value="4:00pm">4:00pm</option>
                         </select>
                     </div>
+                    
                     <p className="timeDisclaimer">
                         Preferred timeslots are indicative. Residents will
                         receive a confirmation a few hours before the scheduled
@@ -260,23 +261,3 @@ function ResidentForm() {
 }
 
 export default ResidentForm;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

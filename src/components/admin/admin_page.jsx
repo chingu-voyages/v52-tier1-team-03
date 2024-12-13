@@ -12,7 +12,7 @@ const AdminPage = () => {
 
         if (currentHour < 12) {
             setGreeting("Good morning ☀️");
-        } else if (currentHour < 18) {
+        } else if (currentHour < 17) {
             setGreeting("Good afternoon 🌞🕛");
         } else {
             setGreeting("Good evening 🌇");
