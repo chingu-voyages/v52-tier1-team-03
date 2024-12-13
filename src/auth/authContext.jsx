@@ -12,7 +12,9 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     return (
-        <AuthContext.Provider value={{ user }}>{children}</AuthContext.Provider>
+        <AuthContext.Provider value={{ user }}>
+            {children} {/* This will render the components passed to AuthProvider */}
+        </AuthContext.Provider>
     );
 };
 

@@ -1,0 +1,16 @@
+.sectionHeader_desktop {
+    width: 618px;
+    height: 54px;
+    margin-top: 57px;
+    margin-left: 82px;
+    font-family: 'Quicksand Bold', sans-serif;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid black;
+    margin: 10px 0;
+    top: 54px;
+    width: 618px; 
+    align-self: flex-start;
+}
