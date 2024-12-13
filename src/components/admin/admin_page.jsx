@@ -8,13 +8,14 @@ const AdminPage = () => {
                     <h2>Good morning, [USER_NAME]</h2>
                     <hr className="divider" />
                 </div>
+
                 <div className="dashboard_cards">
-                    <div className="appt_requests-wrapper">
+                    <div className="dashboard_card">
                         <div className="card-top-border"></div>
 
                         <h3>Appointment Requests</h3>
                         
-                        <div className="appt_requests-content">
+                        <div className="card_content-wrapper">
                             <div className="card-content">
                                 <label>New</label>
                                 
@@ -34,15 +35,22 @@ const AdminPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="completed-visits">
-                        <div className="card-top-border"></div>
-                        <h3>Completed Visits</h3>
 
-                        <div className="list">
-                            <span>#</span><span>view</span>
-                        </div>
+                    <div className="dashboard_card">
+                        <div className="card-top-border"></div>
+
+                        <h3>Completed Visits</h3>
                         
-                         <hr className="list-divider" />
+                        <div className="card_content-wrapper">
+                            <div className="card-content">
+                                
+                                
+                                <div className="list -complete">
+                                    <span>#</span><span>view</span>
+                                </div>
+                                <hr className="list-divider" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
