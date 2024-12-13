@@ -52,9 +52,7 @@ const router = createBrowserRouter([
         path: "/admin",
         element: (
             <>
-                <AppHeader />
                 <AdminLogin />
-                <AppFooter />
             </>
         ),
         errorElement: <Error />,
