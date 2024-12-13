@@ -4,7 +4,7 @@ import "../../styles/resident_confirmation.css";
 function Confirmation() {
     return (
         <div className="residentConfirmation">
-            <div className="message">
+            <div className="confirm-message">
                 <h1 className="confirm-h1">Thank You!</h1>
                 <p>Your request for an appointment has been recieved.</p>
                 <p>
