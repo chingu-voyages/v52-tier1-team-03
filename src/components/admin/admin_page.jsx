@@ -15,23 +15,34 @@ const AdminPage = () => {
                         <h3>Appointment Requests</h3>
                         
                         <div className="appt_requests-content">
-                            <div className="request-number">
+                            <div className="card-content">
                                 <label>New</label>
-
-                                <div className="list">                                <option>
-                                    <span>#{/* jsx: data pulled from the local storage */}</span><span>view</span>
-                                </option></div>
+                                
+                                <div className="list">
+                                    <span>#</span><span>view</span>
+                                </div>
+                                <hr className="list-divider" />
                             </div>
 
-                            <div className="request-confirmed">
+                            <div className="card-content">
                                 <label>Confirmed</label>
+                                
+                                <div className="list">
+                                    <span>#</span><span>view</span>
+                                </div>
+                                <hr className="list-divider" />
                             </div>
                         </div>
                     </div>
                     <div className="completed-visits">
                         <div className="card-top-border"></div>
-                        <p>Completed Visits</p>
-                        {/* jsx: data pulled from the local storage */}
+                        <h3>Completed Visits</h3>
+
+                        <div className="list">
+                            <span>#</span><span>view</span>
+                        </div>
+                        
+                         <hr className="list-divider" />
                     </div>
                 </div>
             </div>
