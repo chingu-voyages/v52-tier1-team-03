@@ -7,7 +7,7 @@ const AppHeader = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const isAuthPage =
-        location.pathname === "/" || location.pathname === "/register";
+        location.pathname === "/" || location.pathname === "/login";
 
     const handleLogout = async () => {
         await fetch("/logout", { method: "POST" });
