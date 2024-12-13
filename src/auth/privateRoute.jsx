@@ -6,7 +6,7 @@ const PrivateRoute = ({ element: Component, ...rest }) => {
     const { user } = useAuth();
 
     if (!user) {
-        return <Navigate to="/admin/newrequests" replace />;
+        return <Navigate to="/admin" replace />;
     }
 
     return <Component {...rest} />;
