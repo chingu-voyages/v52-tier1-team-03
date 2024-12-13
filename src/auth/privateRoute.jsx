@@ -1,12 +1,12 @@
 import React from "react";
+import { Navigate } from "react-router-dom";
 import { useAuth } from "./authContext";
-import Login from "../components/admin/admin_login";
 
 const PrivateRoute = ({ element: Component, ...rest }) => {
     const { user } = useAuth();
 
     if (!user) {
-        return <Login {...rest} />;
+        return <Navigate to="/admin/newrequests" replace />;
     }
 
     return <Component {...rest} />;

@@ -3,7 +3,7 @@ import React from "react";
 const AdminPage = () => {
     return (
         <div className="admin-page">
-            <div className="admin-dashboard">
+            <div className="admin_page-content">
                 <div className="sectionHeader_desktop">
                     <h2>Good morning, [USER_NAME]</h2>
                     <hr className="divider" />
@@ -45,7 +45,7 @@ const AdminPage = () => {
                             <div className="card-content">
                                 
                                 
-                                <div className="list -complete">
+                                <div className="list">
                                     <span>#</span><span>view</span>
                                 </div>
                                 <hr className="list-divider" />
