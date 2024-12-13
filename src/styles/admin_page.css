@@ -1,15 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Quicksand:wght@300..700&display=swap');
 
+*{
+    font-family: "Quicksand", sans-serif;
+}
 
 .admin-page {
     h2 {
         color: #474747;
         font-family: 'Quicksand Semibold 24pt', sans-serif;
         font-size: 24px;
-        font-weight: 400;
+        font-weight: 330;
         line-height: 35px;
         width: 351px;
         height: 35px;
     }
-    height: inherit;
+ 
+
+   
+}
+
+.admin_page-content{
+    margin-bottom: 7rem;
+
 }

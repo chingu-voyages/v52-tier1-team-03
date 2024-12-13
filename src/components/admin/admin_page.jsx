@@ -54,7 +54,7 @@ const AdminPage = () => {
 
                         <div className="card_content-wrapper">
                             <div className="card-content">
-                                <label>New</label>
+                                <label className="label-title">New</label>
                                 <div className="list">
                                     <span>{newRequestsCount}</span>
                                     <Link to="/admin/newrequests">view</Link>
@@ -63,7 +63,7 @@ const AdminPage = () => {
                             </div>
 
                             <div className="card-content">
-                                <label>Confirmed</label>
+                                <label className="label-title">Confirmed</label>
                                 <div className="list">
                                     <span>{confirmedRequestsCount}</span>
                                     <Link to="/admin/confirmedrequests">

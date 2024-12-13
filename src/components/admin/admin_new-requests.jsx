@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import "../../styles/appointment-req.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
+
 
 const NewRequests = () => {
   const [newRequests, setNewRequests] = useState([]);
@@ -67,14 +72,17 @@ const NewRequests = () => {
           <h2>New Appointment Requests</h2>
           <hr className="divider" />
           <div className='new_requests-dropdown'>
-            <label htmlFor="sortby">Sort By</label>
+            <label className='label-padding' htmlFor="sortby">Sort By :</label>
             <select id="sortby" value={sortOption} onChange={handleSortChange}>
               <option value="by-name">By Name</option>
               <option value="by-timeslot">By Timeslot</option>
               <option value="by-address">By Address</option>
               <option value="by-phonenum">By Phone Number</option>
               <option value="by-email">By Email Address</option>
+              <FontAwesomeIcon icon={faChevronDown} />
+             
             </select>
+          
           </div>
         </div>
 

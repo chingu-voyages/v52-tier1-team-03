@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Quicksand:wght@300..700&display=swap");
+
+
+*{
+    font-family: "Quicksand", sans-serif;
+}
+
+
+
+
+.label-padding{
+    padding-right:3rem ;
+}
+
+
+/* ---------------------------------New Request---------------------------------------------- */
+.admin_new-requests{
+    padding-bottom: 7rem;
+}
+
+/* -------------------------------Confirm------------------------------------------ */
+
+.print-btn {
+    display: flex;
+    margin: 0 auto;
+    background-color: #E6B3A5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 3rem;
+  }
+  
+  .print-btn:hover {
+    background-color: #d99c8e; 
+  }
+  
+  .confirmed-requests{
+    margin-bottom: 7rem;
+
+
+  }
+
+
+

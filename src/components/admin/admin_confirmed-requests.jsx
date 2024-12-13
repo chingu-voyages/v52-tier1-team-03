@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import "../../styles/appointment-req.css";
 
 const ConfirmedRequests = () => {
   const [confirmedRequests, setConfirmedRequests] = useState([]);
@@ -84,7 +85,7 @@ const ConfirmedRequests = () => {
           <h2>Confirmed Appointment Requests</h2>
           <hr className="divider" />
           <div className='new_requests-dropdown'>
-            <label htmlFor="sortby">Sort By</label>
+            <label className='label-padding' htmlFor="sortby">Sort By:</label>
             <select id="sortby" value={sortOption} onChange={handleSortChange}>
               <option value="by-name">By Name</option>
               <option value="by-timeslot">By Timeslot</option>
@@ -118,7 +119,7 @@ const ConfirmedRequests = () => {
             ))
           )}
         </div>
-        <button onClick={handlePrintAll}>Print All Confirmed Requests</button>
+        <button className='print-btn' onClick={handlePrintAll}>Print All Confirmed Requests</button>
 
       </div>
     </div>

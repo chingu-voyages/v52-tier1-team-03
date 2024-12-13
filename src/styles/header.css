@@ -37,3 +37,51 @@
     
 
 }
+
+
+
+@media (max-width: 480px) {
+    .header-logo-hidden {
+        display: none;
+    }
+    .logos-container {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        background-color: #4486A4;
+        height: 90px;
+    }
+  
+
+   
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .header-logo-hidden {
+        display: none;
+    }
+    .logos-container {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        background-color: #4486A4;
+        height: 90px;
+    }
+  
+
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+    .header-logo-hidden {
+        display: none;
+    }
+    .logos-container {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        background-color: #4486A4;
+        height: 90px;
+    }
+  
+
+}
