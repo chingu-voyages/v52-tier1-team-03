@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import Calendar from "react-calendar";
+import AppHeader from "../base/app-header";
+import AppFooter from "../base/app-footer";
 import "react-calendar/dist/Calendar.css";
 import "../../styles/resident_form.css";
 import { useNavigate } from "react-router-dom";
@@ -110,7 +112,7 @@ function ResidentForm() {
     };
 
     return (
-        <>
+        <div className="resident-form">
             <form onSubmit={handleSubmit}>
                 <div className="residentInfo">
                     <p className="formTitle">Schedule a Visit</p>
@@ -247,7 +249,7 @@ function ResidentForm() {
                     </div>
                 )}
             </form>
-        </>
+        </div>
     );
 }
 

@@ -1,35 +1,43 @@
 import React from "react";
 
-const Admin = () => {
+const AdminPage = () => {
     return (
-        <>
+        <div className="admin-page">
             <div className="admin-dashboard">
                 <div className="sectionHeader_desktop">
-                {/* - DESIGN CHANGE - */}
-                <h1>Welcome Back</h1>
-                {/* <h1>Good Morning, {USER_NAME}</h1>*/}
+                    <h2>Good morning, [USER_NAME]</h2>
+                    <hr className="divider" />
                 </div>
                 <div className="dashboard_cards">
-                    <div className="appt-requests">
-                        <div className="card-banner-top" />
-                        <h4>Appointment Requests</h4>
-                        
-                        <label>New</label>
-                        {/* jsx: data pulled from the local storage */}
+                    <div className="appt_requests-wrapper">
+                        <div className="card-top-border"></div>
 
-                        <label>Confirmed</label>
-                        {/* jsx: data pulled from the local storage */}
+                        <h3>Appointment Requests</h3>
+                        
+                        <div className="appt_requests-content">
+                            <div className="request-number">
+                                <label>New</label>
+
+                                <div className="list">                                <option>
+                                    <span>#{/* jsx: data pulled from the local storage */}</span><span>view</span>
+                                </option></div>
+                            </div>
+
+                            <div className="request-confirmed">
+                                <label>Confirmed</label>
+                            </div>
+                        </div>
                     </div>
-                    <div className="completed-vists">
-                        <div className="card-banner-top" />
-                        <h4>Completed Visits</h4>
+                    <div className="completed-visits">
+                        <div className="card-top-border"></div>
+                        <p>Completed Visits</p>
                         {/* jsx: data pulled from the local storage */}
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
-export default Admin;
+export default AdminPage;
 
