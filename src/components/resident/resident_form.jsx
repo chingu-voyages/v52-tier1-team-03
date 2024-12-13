@@ -1,7 +1,6 @@
 import { useState} from "react";
 import Calendar from "react-calendar";
-import AppHeader from "../base/app-header";
-import AppFooter from "../base/app-footer";
+
 import "react-calendar/dist/Calendar.css";
 import "../../styles/resident_form.css";
 import { useNavigate } from "react-router-dom";
@@ -99,9 +98,13 @@ function ResidentForm() {
             alert("Invalid address. Please provide a valid Los Angeles address.");
             return;
         }
+        const updatedRequest = { ...request, status: "new" };
 
         const requests = JSON.parse(localStorage.getItem("requests")) || [];
-        requests.push(request);
+        
+        requests.push(updatedRequest);
+
+        
         localStorage.setItem("requests", JSON.stringify(requests));
 
         setShowPopupConfirm(true);
@@ -122,6 +125,7 @@ function ResidentForm() {
                             type="text"
                             id="nameInput"
                             name="name"
+                            placeholder="name"
                             value={request.name}
                             onChange={handleChange}
                             required
@@ -133,6 +137,7 @@ function ResidentForm() {
                             type="email"
                             id="emailInput"
                             name="email"
+                            placeholder="user@yahoo.com"
                             value={request.email}
                             onChange={handleChange}
                             required
@@ -144,6 +149,7 @@ function ResidentForm() {
                             type="tel"
                             id="phoneInput"
                             name="phoneNumber"
+                            placeholder="(647) 123-1264"
                             value={request.phoneNumber}
                             onChange={handleChange}
                             required

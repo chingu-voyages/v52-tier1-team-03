@@ -1,11 +1,48 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const AdminPage = () => {
+    const [newRequestsCount, setNewRequestsCount] = useState(0);
+    const [confirmedRequestsCount, setConfirmedRequestsCount] = useState(0);
+    const [completedRequestsCount, setCompletedRequestCount] = useState(0);
+    const [greeting, setGreeting] = useState("");
+
+    useEffect(() => {
+        const currentHour = new Date().getHours();
+
+        if (currentHour < 12) {
+            setGreeting("Good morning ☀️");
+        } else if (currentHour < 18) {
+            setGreeting("Good afternoon 🌞🕛");
+        } else {
+            setGreeting("Good evening 🌇");
+        }
+
+        const storedRequests = JSON.parse(localStorage.getItem("requests"));
+
+        if (storedRequests && Array.isArray(storedRequests)) {
+            const newRequests = storedRequests.filter(
+                (request) => request.status === "new"
+            );
+            setNewRequestsCount(newRequests.length);
+
+            const confirmedRequests = storedRequests.filter(
+                (request) => request.status === "confirmed"
+            );
+            setConfirmedRequestsCount(confirmedRequests.length);
+
+            const completedRequests = storedRequests.filter(
+                (request) => request.status === "completed"
+            );
+            setCompletedRequestCount(completedRequests.length);
+        }
+    }, []);
+
     return (
         <div className="admin-page">
             <div className="admin_page-content">
                 <div className="sectionHeader_desktop">
-                    <h2>Good morning, [USER_NAME]</h2>
+                    <h2>{greeting}, Admin</h2>
                     <hr className="divider" />
                 </div>
 
@@ -14,22 +51,24 @@ const AdminPage = () => {
                         <div className="card-top-border"></div>
 
                         <h3>Appointment Requests</h3>
-                        
+
                         <div className="card_content-wrapper">
                             <div className="card-content">
                                 <label>New</label>
-                                
                                 <div className="list">
-                                    <span>#</span><span>view</span>
+                                    <span>{newRequestsCount}</span>
+                                    <Link to="/admin/newrequests">view</Link>
                                 </div>
                                 <hr className="list-divider" />
                             </div>
 
                             <div className="card-content">
                                 <label>Confirmed</label>
-                                
                                 <div className="list">
-                                    <span>#</span><span>view</span>
+                                    <span>{confirmedRequestsCount}</span>
+                                    <Link to="/admin/confirmedrequests">
+                                        view
+                                    </Link>
                                 </div>
                                 <hr className="list-divider" />
                             </div>
@@ -40,13 +79,14 @@ const AdminPage = () => {
                         <div className="card-top-border"></div>
 
                         <h3>Completed Visits</h3>
-                        
+
                         <div className="card_content-wrapper">
                             <div className="card-content">
-                                
-                                
                                 <div className="list">
-                                    <span>#</span><span>view</span>
+                                    <span>{completedRequestsCount}</span>
+                                    <Link to="/admin/completedrequests">
+                                        view
+                                    </Link>
                                 </div>
                                 <hr className="list-divider" />
                             </div>
@@ -59,4 +99,3 @@ const AdminPage = () => {
 };
 
 export default AdminPage;
-

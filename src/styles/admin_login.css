@@ -58,6 +58,12 @@ p {
     height: 100%;
 }
 
+.header-logo-hidden{
+    display: none;
+
+
+}
+
 .login {
     display: grid;
 
