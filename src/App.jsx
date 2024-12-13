@@ -6,15 +6,22 @@ import { AuthProvider } from "./auth/authContext";
 
 
 //pages
-import AdminLogin from "./components/admin/admin_login.jsx";
-import AdminPage from "./components/admin/admin_page";
+
 import Error from "./components/admin/admin_error";
 import ResidentLanding from "./components/resident/resident_landing_page.jsx"
-import ResidentForm from "./components/resident/resident_form.jsx";
 import AppHeader from "./components/base/app-header.jsx";
 import AppFooter from "./components/base/app-footer.jsx";
 import Confirmation from "./components/resident/resident_confirmation.jsx"
 
+
+//admin
+import AdminLogin from "./components/admin/admin_login.jsx";
+import AdminPage from "./components/admin/admin_page";
+import NewRequests from "./components/admin/admin_new-requests.jsx";
+import ConfirmedRequests from "./components/admin/admin_confirmed-requests.jsx";
+
+//resident
+import ResidentForm from "./components/resident/resident_form.jsx";
 
 const router = createBrowserRouter([
     {
@@ -65,6 +72,28 @@ const router = createBrowserRouter([
             <>
                 <AppHeader />
                 <PrivateRoute element={AdminPage} />
+                <AppFooter />
+            </>
+        ),
+        errorElement: <Error />,
+    },
+    {
+        path: "/admin/newrequests",
+        element: (
+            <>
+                <AppHeader />
+                <PrivateRoute element={NewRequests} />
+                <AppFooter />
+            </>
+        ),
+        errorElement: <Error />,
+    },
+    {
+        path: "/admin/confirmedrequests",
+        element: (
+            <>
+                <AppHeader />
+                <PrivateRoute element={ConfirmedRequests} />
                 <AppFooter />
             </>
         ),
