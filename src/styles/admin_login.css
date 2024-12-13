@@ -1,7 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Quicksand:wght@300..700&display=swap");
+
+p {
+    font-family: "Quicksand", sans-serif;
+}
+
+.admin-login-elements {
+    display: flex;
+    height: 44rem;
+    width: 100%;
+}
+
+.admin-img-container {
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.admin-lg-h1 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 2.6rem;
+    font-weight: 450;
+    padding-left: 5rem;
+    border: none;
+}
+
+.solar-photo {
+    height: 100%;
+    width: 100%;
+}
+
+.admin-welcome {
+    padding-top:1rem;
+    
+}
+
+.welcome{
+    margin-bottom: 7rem;
+    padding-top:3.3rem;
+    
+}
+
+.admin-lg-h2{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    
+}
+
+.admin-border {
+    border: 0.4px solid rgb(93, 93, 93);
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+    width: 78%;
+}
+
+.login-container {
+    width: 60%;
+    height: 100%;
+}
+
 .login {
     display: grid;
-    width: 100%;
-    height: 100%;
+
     justify-content: center;
     align-items: center;
 }
@@ -9,12 +68,12 @@
 .login-content {
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     margin-bottom: 29px;
     width: 370px;
     height: 432px;
-    margin-top: 20px;
     font-family: Arial, sans-serif;
+    top: -70px;
 }
 
 .login-title {
@@ -28,7 +87,7 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    font-size: 38px;
+    font-size: 17px;
     margin-bottom: 8px;
 }
 
@@ -69,9 +128,10 @@
 .login-btns button {
     display: flex;
     justify-content: space-around;
-    height: 35px;
-    width: 85px;
+    padding: 10px 80px;
+    color: white;
     font-size: 12px;
+    background-color:  #e6b3a5;
 }
 
 /* Password styles */
@@ -86,7 +146,6 @@
     border-radius: 4px;
     width: 100%;
 }
-
 
 .eye-icon {
     position: absolute;
@@ -112,8 +171,301 @@ input[type="email"] {
 .btn {
     display: flex;
     align-items: center;
+    background-color: rgb(93, 188, 188);
 }
 
 .btn span {
     margin-right: 8px;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+@media (max-width: 480px) {
+    .header-elements {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .header-elements {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+   
+    .admin-login-elements{
+        height: 38rem;
+        /* 40rem */
+
+    }
+    
+
+    .admin-img-container {
+        display: none;
+    }
+
+    
+    .admin-lg-h1 {
+        padding-left: 0;
+        border: none;
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    .login-container {
+        width: 100%;
+       
+    }
+
+
+    .rl-header {
+        padding: 1rem;
+    }
+
+ 
+    .admin-border {
+        border: .4px solid rgb(93, 93, 93);
+        display: flex;
+        margin: 0 auto;
+        width: 55%;
+    }
+    
+
+
+    .login-btns{
+        margin-top: 20px;
+    }
+
+    .login-btns button {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 30px;
+        margin: 0 80px;
+        color: white;
+        font-size: 12px;
+        background-color: #e6b3a5;
+    }
+
+    .admin-blue-border {
+        display: block;
+        border: 7px solid #4486A4;
+        border-radius: 5px;
+        width: 30%;
+        margin: 50px auto;
+    }
+
+   
+
+
+   
+}
+
+
+
+
+@media (min-width: 767px) and (max-width: 1024px){
+    .header-elements {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    
+
+    .admin-img-container {
+        display: none;
+    }
+
+    
+    .admin-lg-h1 {
+        padding-left: 0;
+        border: none;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .login-container {
+        width: 100%;
+       
+    }
+
+    
+
+    .rl-header {
+        padding: 1rem;
+    }
+
+ 
+    .admin-border {
+        border: .4px solid rgb(93, 93, 93);
+        display: flex;
+        margin: 0 auto;
+        width: 55%;
+    }
+    
+
+    .login-btns{
+        margin-top: 20px;
+    }
+
+    .admin-blue-border {
+        display: block;
+        border: 7px solid #4486A4;
+        border-radius: 5px;
+        width: 50%;
+        margin: 50px auto;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .header-elements {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .header-elements {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .rl-hero{
+        min-height: 80vh;
+    }
+    
+
+    .admin-img-container {
+        display: none;
+    }
+
+    
+    .admin-lg-h1 {
+        padding-left: 0;
+        border: none;
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    .login-container {
+        width: 100%;
+       
+    }
+
+
+    .rl-header {
+        padding: 1rem;
+    }
+
+ 
+    .admin-border {
+        border: .4px solid rgb(93, 93, 93);
+        display: flex;
+        margin: 0 auto;
+        width: 55%;
+    }
+    
+
+
+    .login-btns{
+        margin-top: 20px;
+    }
+
+    .login-btns button {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 80px;
+        margin: 0 50px;
+        color: white;
+        font-size: 12px;
+        background-color: #e6b3a5;
+    }
+
+    .admin-blue-border {
+        display: block;
+        border: 7px solid #4486A4;
+        border-radius: 5px;
+        width: 50%;
+        margin: 50px auto;
+    }
+
+   
+
+
+   
+}
+
+
+
+
+@media (min-width: 767px) and (max-width: 1024px){
+    .header-elements {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .rl-hero{
+        min-height: 80vh;
+    }
+    
+
+    .admin-img-container {
+        display: none;
+    }
+
+    
+    .admin-lg-h1 {
+        padding-left: 0;
+        border: none;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .login-container {
+        width: 100%;
+       
+    }
+
+
+    .rl-header {
+        padding: 1rem;
+    }
+
+ 
+    .admin-border {
+        border: .4px solid rgb(93, 93, 93);
+        display: flex;
+        margin: 0 auto;
+        width: 55%;
+    }
+    
+
+    .login-btns{
+        margin-top: 20px;
+    }
+
+    .admin-blue-border {
+        display: block;
+        border: 7px solid #4486A4;
+        border-radius: 5px;
+        width: 50%;
+        margin: 50px auto;
+    }
+
+   
 }
