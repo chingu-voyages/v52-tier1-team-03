@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Quicksand:wght@300..700&display=swap');
+
+
+html, body {
+    height: 100%; 
+    margin: 0;
+
+}
+
+
+.resident-landing-page{
+    min-height: 100vh;
+}
+
+p{
+    font-family: 'Quicksand', sans-serif;
+}
+.rl-header{
+    background-color: #4486A4;
+    width: 100%;
+    height: 120px;
+    font-family:'Quicksand', sans-serif;
+}
+
+.header-elements{
+    display: flex;
+    padding: 1rem;
+
+
+}
+
+.sunlogo{
+    height: 6rem;
+    padding-right: 2rem;
+}
+
+.rl-h1{
+    color: white;
+    padding-left: 4rem;
+    font-weight: 500;
+    font-size: 2.6rem;
+    
+
+}
+
+.rl-hero{
+    display: flex;
+    height: 44rem;
+    width: 100%;
+}
+.rl-img-container{
+    width: 40%;
+
+}
+.solar-photo{
+    height: 100%;
+    width: 100%;
+    
+}
+
+.message {
+    width: 60%;
+    height: 100%;
+    flex-grow: 1;
+    
+}
+.welcome{
+    margin-bottom: 7rem;
+    padding-top:3.3rem;
+    
+}
+
+.message h1{
+    font-family:'Quicksand', sans-serif;
+    font-weight: 450;
+    padding-left: 5rem;
+    border: none;
+    
+}
+
+.rl-border{
+    border: .4px solid rgb(93, 93, 93);
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+    width: 78%;
+
+}
+
+.rl-footer {
+    background-color: #4486A4;
+    width: 100%;
+    height: 103px;
+    margin-top: auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+.schl-btn {
+    display: flex;
+    margin: 0 auto;
+    background-color: #e6b3a5;
+    color:white;
+    border: none;
+    padding: 10px 80px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;  
+    text-decoration: none;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+
+}
+
+
+a{
+    text-decoration: none;
+}
+
+.schl-btn:hover {
+    background-color: #c4937d;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), 0 8px 25px rgba(0, 0, 0, 0.25);
+
+}
+
+.hidden{
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .header-elements {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .rl-img-container {
+        display: none;
+    }
+
+    .message {
+        width: 100%; 
+        text-align: center;
+    }
+
+ 
+    .message h1 {
+        padding-left: 0;
+    }
+
+    .welcome {
+        margin-bottom: 4rem;
+    }
+
+    
+
+    .rl-header {
+        padding: 1rem;
+    }
+
+    .rl-h1 {
+        font-size: 2rem;
+        padding-left: 0;
+    }
+
+    .rl-border {
+        border: .4px solid rgb(93, 93, 93);
+        display: flex;
+        margin: 0 auto;
+        width: 78%;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+      
+    }
+
+    .schl-btn {
+        padding: 10px 40px;
+        font-size: 17px;
+        margin-bottom: 3rem;
+    }
+
+    .blue-border {
+        display: block;
+        border: 7px solid #4486A4;
+        border-radius: 5px;
+        width: 38%;
+        margin: 10px auto;
+    }
+
+ 
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .header-elements {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+   
+
+    .rl-img-container {
+        display: none;
+    }
+
+    .message {
+        width: 100%; 
+        text-align: center;
+    }
+
+    .message h1 {
+        padding-left: 0;
+    }
+
+    .welcome {
+        margin-bottom: 4rem;
+    }
+
+    .rl-header {
+        padding: 1rem;
+    }
+
+    .rl-h1 {
+        font-size: 2rem;
+        padding-left: 0;
+    }
+
+    .rl-border {
+        border: .4px solid rgb(93, 93, 93);
+        display: flex;
+        margin: 0 auto;
+        width: 78%;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+     
+    }
+
+    .schl-btn {
+        padding: 10px 40px;
+        font-size: 17px;
+        margin-bottom: 4rem;
+    }
+
+    .blue-border {
+        display: block;
+        border: 7px solid #4486A4;
+        border-radius: 5px;
+        width: 50%;
+        margin: 10px auto;
+    }
+
+   
+}
+
+
+
+
+@media (min-width: 767px) and (max-width: 1024px){
+    .header-elements {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .rl-hero{
+        min-height: 80vh;
+    }
+    
+
+    .rl-img-container {
+        display: none;
+    }
+
+    .message {
+        width: 100%; 
+        text-align: center;
+    }
+
+    .message h1 {
+        padding-left: 0;
+    }
+
+    .welcome {
+        margin-bottom: 4rem;
+    }
+
+    .rl-header {
+        padding: 1rem;
+    }
+
+    .rl-h1 {
+        font-size: 2rem;
+        padding-left: 0;
+    }
+
+    .rl-border {
+        border: .4px solid rgb(93, 93, 93);
+        display: flex;
+        margin: 0 auto;
+        width: 78%;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+     
+    }
+
+    .schl-btn {
+        padding: 10px 40px;
+        font-size: 17px;
+        margin-bottom: 4rem;
+    }
+
+    .blue-border {
+        display: block;
+        border: 7px solid #4486A4;
+        border-radius: 5px;
+        width: 50%;
+        margin: 10px auto;
+    }
+
+   
+}

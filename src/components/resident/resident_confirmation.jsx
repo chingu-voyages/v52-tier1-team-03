@@ -5,7 +5,7 @@ function Confirmation() {
     return (
         <div className="residentConfirmation">
             <div className="message">
-                <h1>Thank You!</h1>
+                <h1 className="confirm-h1">Thank You!</h1>
                 <p>Your request for an appointment has been recieved.</p>
                 <p>
                     You will recieve confirmationa few hours before the scheduled

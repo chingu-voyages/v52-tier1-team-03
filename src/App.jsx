@@ -9,6 +9,7 @@ import { AuthProvider } from "./auth/authContext";
 import AdminLogin from "./components/admin/admin_login.jsx";
 import AdminPage from "./components/admin/admin_page";
 import Error from "./components/admin/admin_error";
+import ResidentLanding from "./components/resident/resident_landing_page.jsx"
 import ResidentForm from "./components/resident/resident_form.jsx";
 import AppHeader from "./components/base/app-header.jsx";
 import AppFooter from "./components/base/app-footer.jsx";
@@ -18,6 +19,15 @@ import Confirmation from "./components/resident/resident_confirmation.jsx"
 const router = createBrowserRouter([
     {
         path: "/",
+        element: (
+            <>
+                <ResidentLanding />
+            </>
+        ),
+        errorElement: <Error />,
+    },
+    {
+        path: "/residentform",
         element: (
             <>
                 <AppHeader />
