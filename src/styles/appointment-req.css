@@ -45,5 +45,32 @@
 
   }
 
+  /* ------------------------------------Buttons---------------------------------------------- */
+
+.btn-1{
+    background-color: #d99c8e;  
+    color: white;               
+    border: none;               
+    padding: 10px 20px;        
+    cursor: pointer;           
+    font-size: 14px;            
+    border-radius: 5px;         
+    transition: background-color 0.3s ease;
+    margin-right: 20px;
+
+}
+
+.btn-2{
+    background-color: #4486A4;;  
+    color: white;               
+    border: none;               
+    padding: 10px 20px;        
+    cursor: pointer;           
+    font-size: 14px;            
+    border-radius: 5px;         
+    transition: background-color 0.3s ease;
+    margin-right: 20px;
+}
+
 
 

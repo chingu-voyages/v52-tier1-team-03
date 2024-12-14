@@ -1,6 +1,6 @@
 .dashboard_cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 20px;
     justify-items: center;
     align-items: start;

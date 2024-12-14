@@ -101,8 +101,8 @@ const NewRequests = () => {
                     <p>{request.phoneNumber}</p>
                     <p>{request.email}</p>
                     <div className="card-buttons">
-                      <button onClick={() => handleConfirm(index)}>Confirm</button>
-                      <button onClick={() => handleCancel(index)}>Cancel</button>
+                      <button className='btn-1' onClick={() => handleConfirm(index)}>Confirm</button>
+                      <button className='btn-2' onClick={() => handleCancel(index)}>Cancel</button>
                     </div>
                   </div>
                 </div>
