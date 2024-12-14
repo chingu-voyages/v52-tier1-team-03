@@ -19,7 +19,7 @@ const AppHeader = () => {
             <div className="logos-container">
                 <div className="app-header header-logo-hidden">
                     <img src={sunLogo} className="admin-sunlogo " alt="" />
-                    <h1 className="logo-h1">SOLAR PLEXIS</h1>
+                    <h1 className="logo-h1">SOLAR PLEXUS</h1>
                 </div>
 
                 <div className="logout-btn">
