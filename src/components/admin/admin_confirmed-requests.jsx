@@ -111,7 +111,7 @@ const ConfirmedRequests = () => {
                     <p>{request.phoneNumber}</p>
                     <p>{request.email}</p>
                     <div className="card-buttons">
-                      <button onClick={() => handleComplete(index)}>Mark as Complete</button>
+                      <button className='btn-2' onClick={() => handleComplete(index)}>Mark as Complete</button>
                     </div>
                   </div>
                 </div>
