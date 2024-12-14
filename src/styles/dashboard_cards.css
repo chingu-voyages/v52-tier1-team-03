@@ -191,23 +191,3 @@ select {
     }
 }
 
-
-@media (min-width: 1280px) {
-    .dashboard_cards {
-        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); 
-        gap: 25px;
-        padding: 30px;
-    }
-
-    .dashboard_card {
-        width: 100%;
-        height: 400px; 
-        max-width: 650px; 
-        margin-top: 4rem;
-    }
-
-    .dashboard_cards h3 {
-        font-size: 26px;
-        line-height: 40px;
-    }
-}

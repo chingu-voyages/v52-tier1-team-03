@@ -57,7 +57,7 @@ const AdminPage = () => {
                                 <label className="label-title">New</label>
                                 <div className="list">
                                     <span>{newRequestsCount}</span>
-                                    <Link to="/admin/newrequests">view</Link>
+                                    <Link to="/admin/newrequests" className="custom-link">view</Link>
                                 </div>
                                 <hr className="list-divider" />
                             </div>
@@ -66,7 +66,7 @@ const AdminPage = () => {
                                 <label className="label-title">Confirmed</label>
                                 <div className="list">
                                     <span>{confirmedRequestsCount}</span>
-                                    <Link to="/admin/confirmedrequests">
+                                    <Link to="/admin/confirmedrequests" className="custom-link">
                                         view
                                     </Link>
                                 </div>
@@ -84,7 +84,7 @@ const AdminPage = () => {
                             <div className="card-content">
                                 <div className="list">
                                     <span>{completedRequestsCount}</span>
-                                    <Link to="/admin/completedrequests">
+                                    <Link to="/admin/completedrequests" className="custom-link">
                                         view
                                     </Link>
                                 </div>
