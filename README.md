@@ -25,10 +25,23 @@ This project includes:
 
 ## Running the project locally
 
-```bash
+### Cloning Repository and Installing Dependencies
+
+```sh
 git clone https://github.com/chingu-voyages/v52-tier1-team-03.git solar-plexus
 cd solar-plexus
 npm install
+```
+
+### Configuring Firebase
+
+Please refer to (firebase config instructions)[./docs/firebase_config.md] .
+
+### Running the Project
+
+Inside the projects root directory, run the following command:
+
+```sh
 npm run dev
 ```
 
