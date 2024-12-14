@@ -19,6 +19,20 @@
    
 }
 
+.custom-link{
+    color:  #4486A4; 
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+}
+
+.custom-link:hover {
+    color: #d99c8e; 
+    
+  }
+
 .admin_page-content{
     margin-bottom: 7rem;
 
