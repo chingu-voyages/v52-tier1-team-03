@@ -15,7 +15,7 @@ function ResidentForm() {
         state: "California",
         zipcode: "",
         date: new Date(),
-        timeslot: "8",
+        timeslot: "8:00am",
     });
 
     const [showPopupConfirm, setShowPopupConfirm] = useState(false);
@@ -95,7 +95,7 @@ function ResidentForm() {
 
         if (!validateAddress()) {
             alert(
-                "Invalid address. Please provide a valid Los Angeles address."
+                "Invalid address. Please provide a valid Los Angeles address.",
             );
             return;
         }
@@ -241,7 +241,7 @@ function ResidentForm() {
                             <option value="4:00pm">4:00pm</option>
                         </select>
                     </div>
-                    
+
                     <p className="timeDisclaimer">
                         Preferred timeslots are indicative. Residents will
                         receive a confirmation a few hours before the scheduled
