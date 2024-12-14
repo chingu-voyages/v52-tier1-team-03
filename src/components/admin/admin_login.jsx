@@ -33,7 +33,7 @@ const AdminLogin = () => {
             <header className="rl-header">
                 <div className="header-elements">
                     <img src={sunLogo} className="sunlogo" alt="" />
-                    <h1 className="rl-h1">SOLAR PLEXIS</h1>
+                    <h1 className="rl-h1">SOLAR PLEXUS</h1>
                 </div>
             </header>
             <div className="admin-login-elements">
