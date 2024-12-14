@@ -35,7 +35,7 @@ npm install
 
 ### Configuring Firebase
 
-Please refer to (firebase config instructions)[./docs/firebase_config.md] .
+Please refer to [firebase config instructions](docs/firebase_config.md) .
 
 ### Running the Project
 
