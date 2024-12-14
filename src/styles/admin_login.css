@@ -4,6 +4,15 @@ p {
     font-family: "Quicksand", sans-serif;
 }
 
+.admin-log-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+}
+
+
 .admin-login-elements {
     display: flex;
     height: 44rem;
@@ -60,8 +69,6 @@ p {
 
 .header-logo-hidden{
     display: none;
-
-
 }
 
 .login {
