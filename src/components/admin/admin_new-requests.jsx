@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/appointment-req.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const NewRequests = () => {
     const [newRequests, setNewRequests] = useState([]);
@@ -113,7 +111,6 @@ const NewRequests = () => {
                             <option value="by-address">By Address</option>
                             <option value="by-phonenum">By Phone Number</option>
                             <option value="by-email">By Email Address</option>
-                            <FontAwesomeIcon icon={faChevronDown} />
                         </select>
                     </div>
                 </div>
