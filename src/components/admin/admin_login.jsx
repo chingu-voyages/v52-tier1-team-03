@@ -99,7 +99,7 @@ const AdminLogin = () => {
                                 <div className="login-btns">
                                     <button
                                         type="submit"
-                                        className="btn btn--dark"
+                                        className="btn"
                                     >
                                         <span>Log In</span>
                                         <UserIcon width={20} />
