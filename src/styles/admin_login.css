@@ -140,13 +140,23 @@ p {
 }
 
 .login-btns button {
+    font-size: 12px;
     display: flex;
     justify-content: space-around;
     padding: 10px 80px;
     color: white;
     font-size: 12px;
     background-color:  #e6b3a5;
+    border-radius: 5px;
+    border: none;
 }
+
+.login-btns button span{
+    margin-right: 10px;
+    font-size: 17px;
+}
+
+
 
 /* Password styles */
 .password-input-wrapper {
@@ -182,15 +192,7 @@ input[type="email"] {
     margin-bottom: 15px;
 }
 
-.btn {
-    display: flex;
-    align-items: center;
-    background-color: rgb(93, 188, 188);
-}
 
-.btn span {
-    margin-right: 8px;
-}
 
 .hidden{
     display: none;

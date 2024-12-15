@@ -50,7 +50,7 @@ p{
 
 .rl-hero{
     display: flex;
-    height: 40rem;
+    height: 44rem;
     width: 100%;
 }
 .rl-img-container{
@@ -123,10 +123,13 @@ a{
     text-decoration: none;
 }
 
+
 .schl-btn {
     pointer-events: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.15);
 }
+
+
 
 .hidden{
     display: none;
