@@ -14,7 +14,6 @@
 ### [Admin](https://v52--solar-panel-project.web.app/admin)
 
 ## Features
-
 This project includes:
 
 -   [] Feature 1
