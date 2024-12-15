@@ -87,16 +87,54 @@ input {
     border-radius: 5px;
     overflow: hidden;
     width: 100%;
+    background-color: white;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2), 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
 }
 
 .react-calendar__navigation {
-    background-color: #c2c0c0;
+    background-color: #c99797;
     margin: 0;
 }
 
 .react-calendar__viewContainer {
-    background-color: #d9d9d9;
+    background-color: white;
 }
+
+.react-calendar__tile {
+    padding: 10px;
+    text-align: center;
+    border-radius: 6px;
+    
+}
+
+.react-calendar__tile--active {
+    background-color: #5aacd2;;
+    color: white;
+    font-weight: bold;
+}
+
+
+.react-calendar__tile--now {
+    background-color: #5aacd2;
+    color:white;
+    font-weight: bold;
+}
+
+/* Parent container styling */
+.formItem {
+    margin: 1rem 0;
+    font-family: Arial, sans-serif;
+}
+
+.formItem label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+
 
 select {
     /* text*/
@@ -134,12 +172,10 @@ select {
     width: calc(100% - 20%); /* NOTE: CSS is so cool now */
     border-radius: 5px;
 
-    /* border */
     border: none;
-
-    /* colours */
-    background-color: #d9d9d9;
-
+    background-color:#4486A4;
+    color: white;
+    font-size: 17px;
     /* cursor */
     cursor: pointer;
 }
