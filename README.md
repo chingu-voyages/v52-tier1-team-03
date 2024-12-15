@@ -15,10 +15,11 @@ This project includes:
  - [] Feature 5
 
 ## Running the project 
- `cd into the project directory`
- ```run npm install``` 
+cd into the project directory
+run npm dev 
 
-* ALWAYS add a live link if there is one so those checking out your work can see it up and running easily. *
+Resident: https://v52--solar-panel-project.web.app/
+Admin: https://v52--solar-panel-project.web.app/admin
 
 ## Dev Dependencies (examples)
   - Husky
