@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "../../styles/dashboard_cards.css";
+
 
 const AdminPage = () => {
     const [newRequestsCount, setNewRequestsCount] = useState(0);
@@ -42,8 +44,8 @@ const AdminPage = () => {
         <div className="admin-page">
             <div className="admin_page-content">
                 <div className="sectionHeader_desktop">
-                    <h2>{greeting}, Admin</h2>
-                    <hr className="divider" />
+                    <h2 className="admin-h2">{greeting} , Admin</h2>
+                    <div className="admin-divider"></div>
                 </div>
 
                 <div className="dashboard_cards">

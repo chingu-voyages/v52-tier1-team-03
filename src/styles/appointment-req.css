@@ -15,7 +15,12 @@
 
 /* ---------------------------------New Request---------------------------------------------- */
 .admin_new-requests{
-    padding-bottom: 7rem;
+    margin-bottom: 7rem;
+}
+
+.new_requests-dropdown{
+  margin-top: 2rem;
+
 }
 
 /* -------------------------------Confirm------------------------------------------ */
@@ -23,7 +28,7 @@
 .print-btn {
     display: flex;
     margin: 0 auto;
-    background-color: #E6B3A5;
+    background-color:#4486A4;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -45,6 +50,12 @@
 
   }
 
+/* -------------------------------Completed------------------------------------------ */
+
+.completed-requests{
+  margin-bottom: 7rem;
+
+}
   /* ------------------------------------Buttons---------------------------------------------- */
 
 .btn-1{
@@ -61,7 +72,7 @@
 }
 
 .btn-2{
-    background-color: #4486A4;;  
+    background-color: #4486A4; 
     color: white;               
     border: none;               
     padding: 10px 20px;        

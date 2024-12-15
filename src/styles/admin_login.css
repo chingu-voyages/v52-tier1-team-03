@@ -272,7 +272,7 @@ input[type="email"] {
 
     .admin-blue-border {
         display: block;
-        border: 7px solid #4486A4;
+        border: 5px solid #4486A4;
         border-radius: 5px;
         width: 30%;
         margin: 50px auto;
@@ -284,64 +284,6 @@ input[type="email"] {
    
 }
 
-
-
-
-@media (min-width: 767px) and (max-width: 1024px){
-    .header-elements {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-    }
-
-    
-
-    .admin-img-container {
-        display: none;
-    }
-
-    
-    .admin-lg-h1 {
-        padding-left: 0;
-        border: none;
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .login-container {
-        width: 100%;
-       
-    }
-
-    
-
-    .rl-header {
-        padding: 1rem;
-    }
-
- 
-    .admin-border {
-        border: .4px solid rgb(93, 93, 93);
-        display: flex;
-        margin: 0 auto;
-        width: 55%;
-    }
-    
-
-    .login-btns{
-        margin-top: 20px;
-    }
-
-    .admin-blue-border {
-        display: block;
-        border: 7px solid #4486A4;
-        border-radius: 5px;
-        width: 50%;
-        margin: 50px auto;
-    }
-
-}
 
 @media (min-width: 481px) and (max-width: 767px) {
     .header-elements {
@@ -403,18 +345,19 @@ input[type="email"] {
     .login-btns button {
         display: flex;
         justify-content: space-around;
-        padding: 10px 80px;
-        margin: 0 50px;
+        padding: 10px 30px;
+        margin: 0 80px;
         color: white;
         font-size: 12px;
         background-color: #e6b3a5;
     }
 
+
     .admin-blue-border {
         display: block;
-        border: 7px solid #4486A4;
+        border: 5px solid #4486A4;
         border-radius: 5px;
-        width: 50%;
+        width: 30%;
         margin: 50px auto;
     }
 
@@ -423,7 +366,6 @@ input[type="email"] {
 
    
 }
-
 
 
 
@@ -477,7 +419,7 @@ input[type="email"] {
 
     .admin-blue-border {
         display: block;
-        border: 7px solid #4486A4;
+        border: 5px solid #4486A4;
         border-radius: 5px;
         width: 50%;
         margin: 50px auto;
