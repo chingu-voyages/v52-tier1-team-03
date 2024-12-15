@@ -247,7 +247,7 @@ function ResidentForm() {
                         receive a confirmation a few hours before the scheduled
                         visit.
                     </p>
-                    <button type="submit">Request Appointment</button>
+                    <button  className="request-appt" type="submit">Request Appointment</button>
                 </div>
 
                 {showPopupConfirm && (
