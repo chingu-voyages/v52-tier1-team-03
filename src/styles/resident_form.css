@@ -45,7 +45,7 @@ form {
 
     /* border */
     border-bottom: solid 1px;
-    padding-left: 2rem;
+
 }
 
 .residentInfo,
@@ -75,10 +75,12 @@ input {
     padding: 16px; /* TODO: 16px is my rem value, double check I can use rem instead */
 
     /* border */
-    border: none;
+
+    border: 1px solid #4486A4;
 
     /* colours */
-    background-color: #d9d9d9;
+    /* background-color: #d9d9d9; */
+    background-color:#e7e5e5;
 }
 
 /* TODO: fix react-calendar styling */
@@ -93,7 +95,7 @@ input {
 }
 
 .react-calendar__navigation {
-    background-color: #c99797;
+    background-color: #4486A4;
     margin: 0;
 }
 
@@ -105,11 +107,12 @@ input {
     padding: 10px;
     text-align: center;
     border-radius: 6px;
+
     
 }
 
 .react-calendar__tile--active {
-    background-color: #5aacd2;;
+    background-color:  #c99797;
     color: white;
     font-weight: bold;
 }
@@ -158,6 +161,8 @@ select {
     font-style: italic;
     font-weight: 300;
     font-size: 15px;
+    text-align: center;
+    
 }
 
 .request-appt {
@@ -173,7 +178,7 @@ select {
     border-radius: 5px;
 
     border: none;
-    background-color:#4486A4;
+    background-color: #e6b3a5;
     color: white;
     font-size: 17px;
     /* cursor */
@@ -197,4 +202,69 @@ select {
     margin: 0;
     font-size: 18px;
     color: #333;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+   
+    
+    input,
+    select {
+        color: black !important; 
+    }
+}
+
+@media (max-width: 767px) {
+  
+    input,
+    select {
+        color: black !important; 
+    }
+
+    .react-calendar__navigation button {
+        color: #333; 
+        text-decoration: none;
+        background-color: transparent; 
+    }
+    
+    
+   
+    .react-calendar__tile--active {
+        background-color:  #c99797;
+        color: white;
+        font-weight: bold;
+    }
+
+   
+    .react-calendar__tile a {
+        color: rgb(27, 24, 24); 
+    }
+    .react-calendar__tile--weekend {
+        color: red !important;
+    }
+
+    .react-calendar__tile {
+        text-decoration: none !important;
+    }
+
+    .react-calendar__tile--now {
+        background-color: #5aacd2;
+        color:white;
+        font-weight: bold;
+    }
+    
+    
+    .react-calendar__navigation__prev-button,
+    .react-calendar__navigation__next-button {
+        color: #333; 
+        text-decoration: none;
+    }
+
+
+    .resident-form{
+
+        margin-bottom: 3.7rem;
+
+    }
+
 }

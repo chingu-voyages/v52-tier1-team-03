@@ -49,8 +49,8 @@ const CompletedRequests = () => {
     <div className="completed-requests">
       <div className="admin_new-requests-content">
         <div className="sectionHeader_desktop">
-          <h2>Completed Appointment Requests</h2>
-          <hr className="divider" />
+          <h2 className="admin-h2">Completed Appointment Requests</h2>
+          <div className="admin-divider"></div>
           <div className="new_requests-dropdown">
             <label className="label-padding" htmlFor="sortby">Sort By:</label>
             <select id="sortby" value={sortOption} onChange={handleSortChange}>
