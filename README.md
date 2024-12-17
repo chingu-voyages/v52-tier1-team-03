@@ -15,20 +15,25 @@ This project aims to simplify the process of scheduling solar panel evaluations 
 ## Features
 This project includes:
 
-	1.	Address Filtering by ZIP Code
-	•	Residents can enter their ZIP code to filter and validate their address from the provided Los Angeles address dataset.
-	•	Autocomplete functionality can narrow down addresses based on partial input or ZIP code.
-	2.	Request Management
-	•	Take Requests: Residents can submit appointment requests via the form.
-	•	Confirm Requests: City hall employees can review pending requests and confirm appointments based on availability and proximity.
-	•	Mark as Complete: Once an evaluation is conducted, employees can update the status of the appointment to “Completed.”
-	3.	Printable Address List
-	•	City hall employees can generate and print a list of confirmed appointments, including the resident’s name, contact details, and address, for use by specialists during visits.
-	4.	Sorting Functionality
-	•	Admins can sort appointments dynamically based on:
-	•	Name: Alphabetical order by resident name.
-	•	Date & Time: Chronological order of appointment times.
-	•	Address: Grouped by street or ZIP code to minimize travel time.
+## Enhanced Features for Solar Panel Planning Application
+
+### 1. Address Filtering by ZIP Code
+- Residents can enter their ZIP code to filter and validate their address from the provided Los Angeles address dataset.
+- Autocomplete functionality can narrow down addresses based on partial input or ZIP code.
+
+### 2. Request Management
+- **Take Requests**: Residents can submit appointment requests via the form.
+- **Confirm Requests**: City hall employees can review pending requests and confirm appointments based on availability and proximity.
+- **Mark as Complete**: Once an evaluation is conducted, employees can update the status of the appointment to “Completed.”
+
+### 3. Printable Address List
+- City hall employees can generate and print a list of confirmed appointments, including the resident’s name, contact details, and address, for use by specialists during visits.
+
+### 4. Sorting Functionality
+- Admins can sort appointments dynamically based on:
+  - **Name**: Alphabetical order by resident name.
+  - **Date & Time**: Chronological order of appointment times.
+  - **Address**: Grouped by street or ZIP code to minimize travel time.
 
 These features enhance usability, improve efficiency, and ensure a seamless experience for both residents and city employees.
 
