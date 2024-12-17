@@ -12,6 +12,10 @@ This project aims to simplify the process of scheduling solar panel evaluations 
 
 ### [Admin](https://v52--solar-panel-project.web.app/admin)
 
+### Login Credentials: 
+**Username**: `Admin@solarplexus.com`
+**Password**: `Password123`
+
 ## Features
 This project includes:
 
