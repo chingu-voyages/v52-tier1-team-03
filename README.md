@@ -1,4 +1,4 @@
-![solar-panel_ai-img](images/solar-panal-ai_gen_img.png)
+us![solar-panel_ai-img](images/solar-panal-ai_gen_img.png)
 
 # Solar Plexus
 
@@ -15,6 +15,7 @@ This project aims to simplify the process of scheduling solar panel evaluations 
 ## Features
 This project includes:
 
+Planning Application
 	1.	Address Filtering by ZIP Code
 	•	Residents can enter their ZIP code to filter and validate their address from the provided Los Angeles address dataset.
 	•	Autocomplete functionality can narrow down addresses based on partial input or ZIP code.
