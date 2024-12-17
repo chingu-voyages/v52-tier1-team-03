@@ -16,6 +16,8 @@ This project aims to simplify the process of scheduling solar panel evaluations 
 This project includes:
 
 Planning Application
+
+Enhanced Features for the Solar Panel Planning Application
 	1.	Address Filtering by ZIP Code
 	•	Residents can enter their ZIP code to filter and validate their address from the provided Los Angeles address dataset.
 	•	Autocomplete functionality can narrow down addresses based on partial input or ZIP code.
@@ -33,6 +35,7 @@ Planning Application
 
 These features enhance usability, improve efficiency, and ensure a seamless experience for both residents and city employees.
 
+	
 ## Running the project locally
 
 ### Cloning Repository and Installing Dependencies
