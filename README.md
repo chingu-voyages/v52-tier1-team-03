@@ -4,8 +4,7 @@
 
 ## Overview
 
-[ A quick run through of what this project does ],
-[ key goals, why it might be helpful ]
+This project aims to simplify the process of scheduling solar panel evaluations for Los Angeles residents and city hall employees. The application will support two user roles: Residents, who can submit appointment requests, and City Hall Employees, who can manage and optimize these requests for evaluation specialists. By streamlining the scheduling process, this app supports the city’s initiative to combat global warming by encouraging solar panel installation.
 
 ## LIVE LINKS
 
