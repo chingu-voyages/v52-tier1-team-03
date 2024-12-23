@@ -17,6 +17,9 @@ html, body {
 
 
 
+
+
+
 p{
     font-family: 'Quicksand', sans-serif;
 }
@@ -52,6 +55,7 @@ p{
     display: flex;
     height: 44rem;
     width: 100%;
+
 }
 .rl-img-container{
     width: 40%;
@@ -67,8 +71,11 @@ p{
     width: 60%;
     height: 100%;
     flex-grow: 1;
+    position: relative;
     
 }
+
+
 .welcome{
     margin-bottom: 7rem;
     padding-top:3.3rem;
@@ -90,6 +97,7 @@ p{
     width: 78%;
 
 }
+ 
 
 .rl-footer {
     background-color: #4486A4;
@@ -127,6 +135,23 @@ a{
 .schl-btn {
     pointer-events: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.admin-container {
+    position: absolute; 
+    bottom: 10px; 
+    right: 10px; 
+    padding: 10px;
+}
+.admin {
+    background-color: white; 
+    color: #4486a4;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif; 
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 

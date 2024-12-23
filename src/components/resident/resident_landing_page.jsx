@@ -2,6 +2,8 @@ import "../../styles/residentlanding.css";
 import sunLogo from "/images/sun_logo.png";
 import solarPhoto from "/images/desktop_stockphoto.jpg";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 function ResidentLanding() {
     return (
@@ -29,6 +31,11 @@ function ResidentLanding() {
                             </button>
                             <div className="blue-border hidden"></div>
                         </Link>
+                    </div>
+                    <div class="admin-container">
+                        <a href="/admin" class="admin">
+                        <FontAwesomeIcon icon={faUser} />  Admin
+                        </a>
                     </div>
                 </div>
             </div>
