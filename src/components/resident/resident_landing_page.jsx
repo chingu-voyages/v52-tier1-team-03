@@ -38,6 +38,11 @@ function ResidentLanding() {
                         </a>
                     </div>
                 </div>
+                <div className="tablet-admin-container ">
+                        <a href="/admin" class="admin">
+                        <FontAwesomeIcon icon={faUser} />  Admin
+                        </a>
+                </div>
             </div>
 
             <footer className="rl-footer"></footer>

@@ -14,7 +14,8 @@ p {
 
 .admin-login-elements {
     display: flex;
-    height: 44rem;
+    height: 39rem;
+
     width: 100%;
 }
 
